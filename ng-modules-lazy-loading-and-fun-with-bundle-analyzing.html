@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ngModules, lazy loading and fun with bundle analyzing</title>
+
+		<meta name="description" content="Angular modular project structure, core, shared, feature modules, lazy loading, bundle analyzing">
+		<meta name="author" content="Aliaksei Kuncevic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>ngModules, lazy loading and fun with bundle analyzing</h2>
+					<p>
+						<small>Created by <a href="http://iterity.io">Aliaksei Kuncevic</a></small>
+						<br />
+						<a href="http://twitter.com/kuncevic" target="_blank">@kuncevic</a> /
+						<a href="http://github.com/kuncevic" target="_blank">github</a> /
+						<a href="https://www.linkedin.com/in/kuncevic/" target="_blank">linkedin</a> /
+						<a href="http://iterity.io/" target="_blank">blog</a>
+					</p>
+				</section>
+				
+				<section id="modules-ng-vs-es">
+					<h2>NgModule vs ES6 Module</h2>
+				</section>
+				
+				<section id="modules-es">
+					<div>
+						<h2>ES6 Module</h2>
+						<pre><code class="hljs">import { AppComponent } from './app.component';</code></pre>
+						<pre><code class="hljs">export { pickBy, cloneDeep }</code></pre>
+					<div>
+				</section>
+				
+				<section id="modules-ng">
+						<h2>NgModule</h2>
+						<pre><code class="hljs">@NgModule({
+  imports: [
+    CommonModule,
+    CustomMaterialModule,
+    ...
+  ],
+  exports: [
+    CommonModule,
+    CustomMaterialModule,
+    Components.AccountComponent,
+    Components.DateTimeComponent,
+    ...
+  ],
+  declarations: [
+    Components.AccountComponent,
+    Components.DateTimeComponent,
+    ...
+  ],
+  providers: []
+})
+export class SharedModule { }
+})</code></pre>
+				</section>
+				
+				<section id="modules-ng-types">
+					<h2>Module types</h2>
+					<ul>
+						<li class="fragment">App module</a></li>
+						<li class="fragment">Core module</li>
+						<li class="fragment">Shared module</li>
+						<li class="fragment">Feature module</li>
+						<li class="fragment">Custom module</li>
+					</ul>
+				</section>
+				
+				<section id="modules-disorganized-app-module">
+					<h2>Disorganized AppModule</h2>
+					<pre><code class="hljs">import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule, Http } from '@angular/http';
+import { RouterModule, RouterLink } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule, MdIconRegistry, MdSelectModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
+import { RouterStoreModule } from '@ngrx/router-store';
+import { ContextMenuModule } from 'angular2-contextmenu';
+
+import { AppRoutingModule  } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { AppAlertService } from './services/app-alert.service';
+import { AuthService } from './services/auth.service';
+import { ExtendedHttpService } from './services/extended-http.service';
+
+import { reducer } from './redux/reducers';
+import { RoundingRuleEffects } from './redux/effects/rounding-rule';
+import { SiteEffects } from './redux/effects/site';
+import { DialogModule } from './components/dialogs/app-dialog.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { DateTimeComponent } from './components/partials/date-time/date-time.component';
+import { TimeService } from './services/time.service';
+import { GreetingsComponent } from './components/partials/account/greetings/greetings.component';
+import { LogoComponent } from './components/partials/logo/logo.component';
+import { LoggedInGuard } from './guards/logged-in.guard';
+import { PermissionGuard } from './guards/permission.guard';
+import { LoginComponent } from './components/login/login.component';
+import { AccountComponent } from './components/partials/account/account.component';
+import { LoaderComponent } from './components/partials/loader/loader.component';
+import { InsufficientPermissionsComponent } from './components/insufficient-permissions/insufficient-permissions.component';
+import { PrettyPrintPipe } from './pipes/pretty-print.pipe';
+import { SitePickerComponent } from './components/partials/site-picker/site-picker/site-picker.component';
+import { RulesModule } from './components/rules/rules.module';
+import { PowerbiModule } from './components/reports/powerbi/powerbi.module';
+import { CustomReportsModule } from './components/reports/custom/custom-reports.module';
+import { HomeModule } from './components/home/home.module';
+import { LoaderService } from './services/loader.service';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    NotFoundComponent,
+    DateTimeComponent,
+    GreetingsComponent,
+    LogoComponent,
+    LoginComponent,
+    AccountComponent,
+    LoaderComponent,
+    InsufficientPermissionsComponent,
+    PrettyPrintPipe,
+    SitePickerComponent,
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    DialogModule,
+    ContextMenuModule,
+    BrowserAnimationsModule,
+    HomeModule,
+    CustomReportsModule,
+    PowerbiModule,
+    RulesModule,
+    StoreModule.provideStore(reducer),
+    RouterStoreModule.connectRouter(),
+    StoreDevtoolsModule.instrumentOnlyWithExtension(),
+    EffectsModule.run(RoundingRuleEffects),
+    EffectsModule.run(SiteEffects),
+
+  ],
+  providers: [
+    MdIconRegistry,
+    MdSelectModule,
+    AppAlertService,
+    TimeService,
+    LoggedInGuard,
+    PermissionGuard,
+    RouterLink,
+    AuthService,
+    { provide: Http, useClass: ExtendedHttpService },
+    LoaderService
+    ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+  constructor() {
+
+  }
+} 
+})</code></pre>
+				<h3>110 Lines of code and can grow...</h3>
+				</section>
+				
+				<section id="modules-disorganized-folders">
+					<h2>disorganized Folders Sturecture</h2>	
+					<img width="28%" data-src="img/app-module-beofre.png" />
+				</section>
+				
+				
+				
+				<section id="modules-core-feature-shared-custom">
+					<h2>Core, Feature, Shared, Custom</h2>
+					<img width="38%" data-src="img/core-feature-shared-custom.png" />
+				</section>
+				
+				<section id="modules-organized-app-module">
+					<h2>Organized AppModule</h2>
+					<pre><code class="hljs">import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { ComponentsModule } from './components';
+import { AppRoutingModule  } from './app-routing.module';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+  ],
+  imports: [
+    AppRoutingModule,
+    ComponentsModule,
+    CoreModule,
+    SharedModule
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+  constructor() { }
+}
+	</code></pre>
+				<h3>21 Lines of code</h3>
+				<a href="https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-06">Style Guide #04-06</a>
+				</section>
+				
+				<section id="modules-organized-folders">
+					<h2>Organized Folders Sturecture</h2>	
+					<img width="33%" data-src="img/app-module-after.png" />
+					<br />
+					<a href="https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-06">Style Guide #04-06</a>
+				</section>
+				
+				<section id="lazy-loading-rule">
+					<h2>Lazy loading</h2>
+					<ul>
+						<li class="fragment">We are loading feature modules</li>
+						<li class="fragment">No references exposed from feature module</li>
+						<li class="fragment">Use `loadChildren` proerty with `text link` to your module</li>
+						<li class="fragment">Feature routing module + feature module</li>
+					</ul>
+				</section>
+				
+				<section id="lazy-loading-routing">
+					<h2>Lazy loading LoadChildren</h2>
+					<pre><code class="hljs">
+  import { MyComponent } from './components';
+  ...
+	
+  {
+    path: 'stuff',
+    component: MyComponent
+  }
+	</code></pre>
+	<pre><code class="hljs">
+  {
+    path: 'stuff',
+    loadChildren: 'app/features/my-feature/my-feature.module#MyModule'
+  }
+	</code></pre>
+				</section>
+
+<section id="lazy-loading-router-module">
+	<h2>Lazy loading Routes</h2>
+	<pre><code class="hljs">const routes: Routes = [
+{
+  path: '',
+  children: [
+  {
+    path: '',
+    component: MyComponent
+   },
+  ]
+}
+];
+
+@NgModule({
+imports: [RouterModule.forChild(routes)],
+exports: [RouterModule]
+})
+export class MyRoutingModule { }
+	</code></pre>
+</section>
+<section id="lazy-loading-ng-module">
+	<h2>Lazy loading Module</h2>
+	<pre><code class="hljs">@NgModule({
+  imports: [
+    CommonModule,
+    PowerbiRoutingModule,
+    FormsModule,
+    NgxDatatableModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpModule,
+    SharedHttpModule.forRoot(),
+    CustomMaterialModule
+  ],
+  declarations: [
+    MyComponent,
+  ]
+})
+export class MyModule { }
+}</code></pre>
+</section>
+
+<section id="lazy-loading-ng-module-for-root">
+  <h2>Module.ForRoot() pattern</h2>
+	<pre><code class="hljs">@NgModule({
+  imports: [
+    CommonModule,
+    HttpModule
+  ],
+  exports: [
+    CommonModule,
+    HttpModule
+  ]
+})
+export class MyModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: MyModule,
+        providers: [
+          service1,
+          service2
+        ]
+    };
+  }
+}</code></pre>
+</section>
+				
+				<section id="lazy-loading-demo">
+					<h2>Demo</h2>
+				</section>
+				
+				<section id="bundle-analyzing-tools">
+					<h2>Tools</h2>
+					<ul>
+						<li>
+							webpack-bundle-analyzer
+							<pre><code class="hljs">ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json
+							 </code></pre>
+
+						</li>
+						<li>
+							source-map-explorer
+							<pre><code class="hljs">source-map-explorer bundle.min.js bundle.min.js.map
+							 </code></pre>
+						</li>
+					</ul>
+				</section>
+				
+				<section id="bundle-analyzing-result">
+					<h2>Bafore vs After</h2>
+					<img width="48%" data-src="img/bundle-before.png" />
+					<img width="48%" data-src="img/bundle-after.png" />
+				</section>
+				
+				<section id="bundle-analyzing-rules">
+				<h2>Things to notice</h2>
+<pre><code class="hljs">import pickBy from 'lodash';
+import * as moment from 'moment';
+import { Observable } from 'rxjs';
+</code></pre>
+<pre><code class="hljs">import pickBy from 'lodash-es/pickBy';
+import * as moment from 'moment-mini';
+import { Observable } from 'rxjs/Observable';
+</code></pre>
+</section>
+<section id="bundle-analyzing-custom-module">
+	<h2>Custom module</h2>
+<pre><code class="hljs">import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  MdDialogModule,
+  MdToolbarModule
+
+} from '@angular/material';
+
+@NgModule({
+  imports: [
+    CommonModule,
+    MdDialogModule,
+    MdToolbarModule
+  ],
+  exports: [
+    CommonModule,
+    MdDialogModule,
+    MdToolbarModule
+  ]
+})
+export class CustomMaterialModule { }
+	</code></pre>
+				<a href="https://github.com/angular/material2/issues/4137" target="_blank">Issue #4137</a>
+				</section>
+				
+				<section id="modules-import-rxjs">
+	<h2>RxJS imports</h2>
+	rxjs-operators.ts
+<pre><code class="hljs">import 'rxjs/add/observable/throw';
+import 'rxjs/add/observable/interval';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';</code></pre>
+					<h2>Before</h2>
+<pre><code class="hljs">import 'rxjs/add/operator/map';
+MyObservable$.map((cities: City[]) =>
+  new city.LoadSuccessAction(cities)
+)
+</code></pre>
+					<h2>After</h2>
+<pre><code class="hljs">MyObservable$.map((cities: City[]) =>
+  new city.LoadSuccessAction(cities)
+)
+</code></pre>
+				</section>
+				
+								<section id="modules-import-lodash">
+	<h2>Lodash imports</h2>
+	lodash-functions.ts
+<pre><code class="hljs">import pickBy from 'lodash-es/pickBy';
+import cloneDeep from 'lodash-es/cloneDeep';
+export {
+  pickBy,
+  cloneDeep
+}</code></pre>
+					<h2>Usage</h2>
+<pre><code class="hljs">import { pickBy } from './../../../core/lodash-functions';
+...
+return pickBy(item, function(value, key) { return !key.startsWith('$$'); }) as T;</code></pre>
+				</section>
+				
+				<section id="links" style="white-space: nowrap">
+					<h3>Links:</h3>
+					<a href="https://github.com/kuncevic/angular-modular-project-structure" target="_blank">
+					https://github.com/kuncevic/angular-modular-project-structure
+					</a>
+					<br />						
+					<a href="https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-06" target="_blank">
+					https://angular.io/docs/ts/latest/guide/style-guide.html#!#04-06
+					</a>
+					<br />		
+					<a href="https://github.com/angular/material2/issues/4137" target="_blank">
+					https://github.com/angular/material2/issues/4137
+					</a>
+					<br />
+					<a href="https://github.com/th0r/webpack-bundle-analyzer" target="_blank">
+					https://github.com/th0r/webpack-bundle-analyzer
+					</a>
+					<br />
+					<a href="https://github.com/danvk/source-map-explorer" target="_blank">
+					https://github.com/danvk/source-map-explorer
+					</a>
+					<br />
+					<a href="https://github.com/robertknight/webpack-bundle-size-analyzer" target="_blank">
+						https://github.com/robertknight/webpack-bundle-size-analyzer
+					</a>					
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
