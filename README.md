@@ -2,9 +2,9 @@ The list of my presentations:
 
 ng-sydney:  
 
-10 May 2017: [ngModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)
-
 13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)
+
+10 May 2017: [ngModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)
 
 TODO: add all the rest here
 
