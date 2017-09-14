@@ -40,7 +40,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section style="margin-top:80px !important;">
+					<section style="margin-top:80px !important;">
 					<h2>Getting sarted with angular material 2</h2>
 					<p><small>Created by <a href="https://www.linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></small></p>
 					<p style="text-align: left; margin-top:240px !important;">
@@ -51,74 +51,64 @@
 						<a href="https://www.linkedin.com/in/kuncevic/" target="_blank">https://www.linkedin.com/in/kuncevic</a>
 					</p>
 				</section>
-
 				
 				<section id="frst-steps">
 					<h2>First Steps</h2>
 					<ol>
 						<li class="fragment">Explore <a href="https://github.com/angular/material2/" target="_blank">Maerial 2 repo</a></li>
 						<li class="fragment">Get Doc Site working locally</li>
-						<li class="fragment">Get more examples</li>
-						<li class="fragment"><a href="https://github.com/jelbourn/material2-app" target="_blank">Maerial 2 app</li>
+						<li class="fragment">Explore official <a href="https://material.angular.io/guides" target="_blank">guides</a></li>
 					</ol>
-				</section>			
+				</section>	
+
+				<section id="cdk">
+					<h2>Material 2 and cdk</h2>
+				</section>					
 
 				<section id="integration">
-					<h2>Integration in to real app</h2>
-					<ol>
-						<li class="fragment"><a href="https://github.com/angular/angular-cli" target="_blank">Angular2 CLI</a></li>
-						<li class="fragment"><a href="https://github.com/preboot/angular2-webpack" target="_blank">Angular2 Webpack</a></li>
-						<li class="fragment"><a href="https://github.com/AngularClass/angular2-webpack-starter" target="_blank">Angular2 Webpack Starter</a></li>
-					</ol>
+					<h2>Integration in to real app(angular cli)</h2>
 				</section>
 
 				<section id="npm-install">
 					<h2>NPM</h2>
-					<pre><code class="hljs">npm install @angular/material --save</code></pre>
+					<pre><code class="hljs">npm install --save @angular/material @angular/cdk</code></pre>
 				</section>
 				
-				<section id="ng-module">
-					<h2>NgModule</h2>
+				<section id="custom-material-module">
+					<h2>Custom material module</h2>
 					<pre><code class="hljs">
-import { MaterialModule, MdIconRegistry } from '@angular/material';
+import {MdButtonModule, MdCheckboxModule} from '@angular/material';
+
 @NgModule({
-  imports: [
-	BrowserModule,
-	HttpModule,
-	FormsModule,
-	routing,
-	MaterialModule
-  ],
-  //...
-  providers: [
-	ApiService,
-	GithubService,
-	MdIconRegistry
-  ],
-  bootstrap: [AppComponent]
+  imports: [MdButtonModule, MdCheckboxModule],
+  exports: [MdButtonModule, MdCheckboxModule],
 })
+export class CustomMaterialModule { }
 					</code></pre>
 				</section>
 				
 				<section id="theming">
-					<h2>Vendors.ts</h2>
-					<pre><code class="hljs">import '@angular/material/core/theming/prebuilt/indigo-pink.css';</code></pre>
+					<h2>Theming and typography</h2>
+				</section>
+				
+				<section id="custom-theme">
+					<h2>Custom theme</h2>
+					<a href="https://stackoverflow.com/questions/43966889/how-do-i-map-a-palette-from-www-materialpalette-com-to-an-angular-2-theme/43969755#43969755" target="_blank">Guide</a>
 				</section>
 
 				<section id="material-icons">
 					<h2>Material icons</h2>
 					<p>
-						<h3 class="fragment">Index.html</h3>
 						<pre class="fragment"><code class="hljs"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></code></pre>
 					</p>
+					<span class="fragment">OR</span>
 					<p>
-						<h3 class="fragment">Vendors.ts</h3>
 						<pre class="fragment"><code class="hljs">npm install material-design-icons --save</code></pre>
 						<pre class="fragment"><code class="hljs">import 'material-design-icons/iconfont/material-icons.css</code></pre>
 					</p>
 				</section>
 
-				<section id="angular-cli">
+				<section id="angular-cli-config">
 					<h2>angular-cli.json</h2>
 					<pre><code class="hljs">
 "styles": [],
@@ -126,23 +116,36 @@ import { MaterialModule, MdIconRegistry } from '@angular/material';
 	  </code></pre>
 					
 				</section>
-				<section id="links">
+				
+				<section id="flex-layout">
+					<h2>Flex Layout</h2>
+					<h3 class="fragment">provides a sophisticated layout API using Flexbox CSS + mediaQuery</h3>
+				</section>
+				
+				<section>
 					<h3>Links</h3>		
-					<a href="https://material.google.com/">
-					https://material.google.com/
+					<a href="https://material.google.com">
+					https://material.google.com
 					</a>
-					<br />		
+					<br />	
+					<a href="https://material.angular.io">
+					https://material.angular.io
+					</a>
+					<br />						
 					<a href="https://github.com/angular/material2">
 					https://github.com/angular/material2
 					</a>
 					<br />
-					<a href="https://github.com/jelbourn/material2-app">
-					https://github.com/jelbourn/material2-app
+					<a href="https://github.com/angular/flex-layout">
+					https://github.com/angular/flex-layout
+					</a>		
+					<br />
+					<a href="https://tburleson-layouts-demos.firebaseapp.com/#/docs">
+					https://tburleson-layouts-demos.firebaseapp.com/#/docs
 					</a>
-					<a href="https://github.com/preboot/angular2-webpack">
-					https://github.com/preboot/angular2-webpack
-					</a>			
-				</section>	
+				</section>
+		
+		<section>				
 
 			</div>
 
