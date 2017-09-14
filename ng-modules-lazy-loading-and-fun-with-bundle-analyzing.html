@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>ngModules, lazy loading and fun with bundle analyzing</title>
+		<title>NgModules, lazy loading and fun with bundle analyzing</title>
 
 		<meta name="description" content="Angular modular project structure, core, shared, feature modules, lazy loading, bundle analyzing">
 		<meta name="author" content="Aliaksei Kuncevic">
@@ -40,15 +40,15 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h2>ngModules, lazy loading and fun with bundle analyzing</h2>
-					<p>
-						<small>Created by <a href="http://iterity.io">Aliaksei Kuncevic</a></small>
+				<section style="margin-top:80px !important;">
+					<h2>NgModules, lazy loading and fun with bundle analyzing</h2>
+					<p><small>Created by <a href="https://www.linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></small></p>					
+					<p style="text-align: left; margin-top:150px !important;">
+						<a href="http://twitter.com/kuncevic" target="_blank">@kuncevic</a>
 						<br />
-						<a href="http://twitter.com/kuncevic" target="_blank">@kuncevic</a> /
-						<a href="http://github.com/kuncevic" target="_blank">github</a> /
-						<a href="https://www.linkedin.com/in/kuncevic/" target="_blank">linkedin</a> /
-						<a href="http://iterity.io/" target="_blank">blog</a>
+						<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+						<br />
+						<a href="https://www.linkedin.com/in/kuncevic/" target="_blank">https://www.linkedin.com/in/kuncevic</a>
 					</p>
 				</section>
 				
@@ -493,7 +493,7 @@ return pickBy(item, function(value, key) { return !key.startsWith('$$'); }) as T
 				history: true,
 				center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
