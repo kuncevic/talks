@@ -2,6 +2,7 @@ The list of my presentations:
 
 ng-sydney:  
 
+<<<<<<< HEAD
 10 May 2017: [ngModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)  
 13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)  
 09 November 2016: How to start with angualar material 2 // add slides
@@ -11,5 +12,12 @@ ng-sydney:
 Angular hackday:  
 
 22 April 2016: Angular forms and validation // add slides
+=======
+13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)
+
+10 May 2017: [ngModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)
+
+TODO: add all the rest here
+>>>>>>> 29c21edc1da418c92701b686e3a6310b2e99b3cf
 
 Built with [reveal.js](https://github.com/hakimel/reveal.js)
