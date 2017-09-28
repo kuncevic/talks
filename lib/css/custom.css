@@ -1,0 +1,33 @@
+/*
+
+My custrom css here
+
+*/
+.parent {
+  display: flex;
+  padding-top: 100px !important;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 0 0!important;
+  justify-content: flex-end;
+  width:100%;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+    text-align: right;
+	margin-bottom: 0.2em;
+}
+
+.left p,
+.right p {
+  font-size: 70%;
+  margin: 0px;
+}
