@@ -31,3 +31,26 @@ My custrom css here
   font-size: 70%;
   margin: 0px;
 }
+
+img.img-no-border {
+	margin: 0 !important;
+	background:none !important;
+	border:none !important;
+	box-shadow: none !important;
+}
+
+.margin-left-15 {
+	margin-left:15px !important;
+}
+
+.inline-block {
+	display:inline-block;
+}
+
+.line-through,
+a:link.line-through,
+a:visited.line-through,
+a:hover.line-through, 
+a:active.line-through {
+	text-decoration:line-through;
+}
