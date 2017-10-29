@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+	
+		<title>Angular. The year after</title>
+		
+		<link rel="icon" type="image/x-icon" href="fi/angular.ico">
+
+		<meta name="description" content="redux, ngrx, angular, store">
+		<meta name="author" content="Aliaksei Kuncevic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/angular.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<link rel="stylesheet" href="lib/css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section id="about">
+						<br />
+						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></h2>
+						<p><small>Software Engeneer/Technology Consultant</small></p>
+						<div style="position:relative;">
+							<div style="position:absolute; left:70px;">
+								<img width="13%" data-src="img/logo-typescript.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="13%" data-src="img/logo-angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+						<div/>
+						<br /><br />
+						<div class="parent">
+							<div class="left">
+								<p>
+									<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+									<br />
+									<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+									<br />
+									<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+								</p>
+							</div>
+							<div class="right">
+								<small>
+									<p>v 1.0 (31/10/2017)</p>
+								</small>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="intro">
+					<img width="50%" data-src="img/angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					<h2>The year after</h2>
+					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></small></p>
+							
+					<div class="parent">
+						<div class="left">
+							<p>
+								<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+								<br />
+								<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+								<br />
+								<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+							</p>
+						</div>
+						<div class="right">
+							<small>
+								<p>v 1.0 (31/10/2017)</p>
+							</small>
+						</div>
+					</div>
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+				<section>		
+					<section id="what-is-angular">
+						<h2>What is angular?</h2>
+						<img width="50%" data-src="img/logo-angular.png" class="img-no-border margin-left-15"/>
+					</section>
+					
+					<section id="platform">					
+						<p>TypeScript-based open-source front-end web application platform led by the Angular Team at Google</p>
+						<a href="https://en.wikipedia.org/wiki/Angular_(application_platform)" target="_blank">(c) Wikipedia</a>
+					</section>		
+					
+					<section id="angular-confusion">
+						<h2>Confusion</h2>
+						<img width="80%" data-src="img/angular-confusion.png" class="img-no-border margin-left-15"/>
+					</section>
+					
+					<section id="angular_js_vs_angualr">
+						<div>
+							<img width="50%" data-src="img/angular.png" class="img-no-border margin-left-15 middle"/> <h2 class="inline middle">== 2+</h2>
+						</div>
+						<!-- <h1 class="margin-0 padding-0">&ne;</h1> -->
+						<h1>!=	</h1>
+						<div>
+							<img width="50%" data-src="img/angular_js.png" class="img-no-border margin-left-15 middle"/> <h2 class="inline middle">== 1.x</h2>
+						</div>
+					</section>
+					
+					<section id="just-angular">
+						<img width="70%" data-src="img/meme-just-angular.png" class="img-no-border margin-left-15"/> <br />
+						<!-- <a class="fragment" href="http://angularjs.blogspot.com.au/2016/10/versioning-and-releasing-angular.html" target="_blank">*Versioning and Releasing Angular</a> -->
+					</section>
+					
+					<section id="search">			
+							<h2>Google Search</h2>
+							<ol class="fragment">
+								<li>
+									<ol class="list-type-a">
+										<li class="fragment strike">angular http</li>
+										<li>angular 2 http</li>
+									</ol>
+								</li>
+								<li>
+									<ol class="list-type-a">
+										<li class="fragment strike">angular facebook login</li>
+										<li>angular 4 facebook login</li>
+									</ol>
+								</li>
+								<li>
+									<ol class="list-type-a">
+										<li>angular 2 material</li>
+										<li class="fragment strike">angular material -angularjs</li>
+									</ol>
+								</li>
+							</ol>
+					</section>
+					
+					<section id="angular-search-results">
+						<h2>Search Results</h2>
+						<img width="80%" data-src="img/angular-search-facebook-login.png" class="img-no-border margin-left-15"/> <br />
+						<!-- <a class="fragment" href="http://angularjs.blogspot.com.au/2016/10/versioning-and-releasing-angular.html" target="_blank">*Versioning and Releasing Angular</a> -->
+					</section>
+					
+					<section id="base">
+						<h2>ecosytem</h2>
+						<div>
+							<img width="15%" data-src="img/logo-rxjs.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<br />
+							<img width="15%" data-src="img/logo-typescript.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="10%" data-src="img/logo-js.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="10%" data-src="img/logo-es6.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="10%" data-src="img/logo-es7.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<br />
+							<img width="16%" data-src="img/logo-angular-cli.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="10%" data-src="img/logo-webpack.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="10%" data-src="img/logo-nodejs.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="12%" data-src="img/logo-npm.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+						</div>
+					</section>
+					
+					<section id="core-and-optional-libraries">
+						<h2>Core libraries</h2>
+						<ul>
+							<li>@angular/animations</li>
+							<li>@angular/common</li>
+							<li>@angular/compiler</li>
+							<li>@angular/core</li>
+							<li>@angular/forms</li>
+							<li>@angular/router</li>
+							<!-- <li>core-js</li> -->
+							<!-- <li>rxjs</li> -->
+							<!-- <li>zone.js</li> -->
+							...and more
+						</ul>
+					</section>
+					
+					<section id="features">
+						<h2>Features</h2>					
+						<ul>
+							<li>Declarative components</li>
+							<li>Forms and validation</li>
+							<li>Routing(Lazy loading, guards)</li>
+							<li>Animations(CSS animations and transitions)</li>
+							<li>Dependency injection</li>
+							<li>Lifecycle hooks</li>
+							<li>ES6+(TypeScript)</li>
+							<li>Testable(unit and e2e tests)</li>
+							<li>Mobile and desktop (Electron, Ionic, NativeScript)</li>	
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section id="the-year-after">
+						<h2>The year after</h2>
+						<ul>
+							<li>Finally released back in Septermber 2016</li>
+							<li>Currently version 5 as in October 2017</li>
+						</ul>	
+					</section>
+					<section id="angular-3">
+						<h2>angular 3 mystery</h2>
+						<img width="80%" data-src="img/meme-angular-3.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="the-year-after-details">
+						<h2>Angular 2 to 5</h2>
+						<ul>
+							<li>Performance improvements (AOT in dev)</li>
+							<li>New, better HttpClient</li>
+							<li>Multiple UI componets frameworks</li>
+							<li>Server Side Rendering (SSR)</li>
+							<li>State Management(NGRX)</li>
+							<li>Angular CDK</li>
+							<li>Styleguide linting (codelyzer)</li>
+							<li>Responsive(flex-layout, @angular/cdk/layout)</li>
+							<li>PWA support</li>
+						</ul>	
+					</section>
+					
+					<section id="community">					
+						<h2>Community</h2>
+						<ul>
+							<li>1M+ developers (based on angular.io hits)</li>
+							<li>NPM 2M+ downloads per month</li>
+							<li>gitter channel (gitter.im/angular/angular)</li>
+							<li>stackoverflow (80K+ questoins)</li>
+							<li>stackblitz (online VS Code IDE)</li>
+						</ul>
+					</section>
+					
+					<section id="stackblitz">					
+						<h2>stackblitz</h2>
+						<img data-src="img/angular-stackbliz.gif" class="img-no-border" />
+					</section>
+					
+				</section>
+				
+				<section>
+					<section id="angular-component">
+						<h2>Angular Component</h2>
+						<img width="48%" data-src="img/angular-template.png" />
+						<img width="48%" data-src="img/angular-template-inline.png" />
+					</section>
+					
+					<section id="app-module">
+						<h2>Single Module</h2>
+						<img width="48%" data-src="img/angular-app-module.png" />
+					</section>
+					
+					<section id="feature-module">
+						<h2>Multiple Modules</h2>
+						<img width="70%" data-src="img/angular-feature-module.png" />
+					</section>
+					
+					<section  id="multiple-apps">
+						<h2>Multiple Apps</h2>
+						<img width="68%" data-src="img/angular-feature-enterprise.png" />
+					</section>
+					
+					<section id="enterprise-ready">					
+						<h2>Enterise ready</h2>
+					</section>
+					
+				</section>
+				
+				<section>
+					
+					<section id="angular-cli">
+						<h2>Angular cli</h2>
+						<img width="40%" data-src="img/logo-angular-cli.png" class="img-no-border" />
+					</section>
+					
+					<section id="angular-cli-fetures">
+						<h2>Features</h2>
+						<ul>
+							<li>Scaffolding (minimize boilerplate)</li>
+							<li>Run unit and e2e tests</li>
+							<li>Linting (tslint, codelyzer)</li>
+							<li>Transpiling TypeScript</li>
+							<li>Compress assets</li>
+							<li>Compiling LESS/SASS</li>
+							<li>Webpack (dev, prod builds, code split)</li>
+							<li>Threeshaking</li>
+							<li>Minification</li>
+							<li>Produce CSS and JS bundles</li>
+						</ul>
+					</section>
+					
+					<section id="angular-cli-usage">
+						<h2>usage</h2>
+						<pre><code class="hljs">npm install -g @angular/cli
+ng new my-app
+cd my-app
+ng serve
+	</code></pre>
+
+						<pre><code class="hljs">ng generate component my-component (ng g c my-component)
+ng generate service my-service (ng g s my-service)
+ng generate module my-module (ng g s my-module)
+	</code></pre>
+						<pre><code class="hljs">ng lint
+ng test
+ng e2e
+ng build --prod
+	</code></pre>
+					</section>
+					
+					<section id="angular-cli-output">
+						<h2>build output</h2>
+						<img width="65%" data-src="img/angular-cli-bundles.png" class="img-no-border" />
+					</section>
+					
+				<section id="dev-productivity">					
+						<h2>Dev productivity</h2>
+				</section>
+				
+				</section>
+				
+				<section>
+					<section id="ui-components">
+						<h2>UI components</h2>
+						<div>	
+							<img width="20%" data-src="img/logo-material-design.svg" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="20%" data-src="img/logo-ng-bootstrap.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="20%" data-src="img/logo-prime-ng.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<br />
+							<img width="12%" data-src="img/logo-clarity.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="12%" data-src="img/logo-infragistics.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="12%" data-src="img/logo-kando-ui.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="12%" data-src="img/logo-lightning.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="12%" data-src="img/logo-wijmo.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<img width="16%" data-src="img/logo-materialize.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							<br />
+							...and more
+						</div>
+					</section>
+					<section id="angular-material">
+						<h2>Angular Material</h2>
+						<img data-src="img/angular-material2.png" class="img-no-border" />
+					</section>
+					
+					<section id="angular-material-features">
+						<h2>Features</h2>
+						<ul>
+							<li>Internationalized and accessible</li>
+							<li>Straightforward APIs</li>
+							<li>Code is clean and well-documented</li>
+							<li>Well-tested with both unit and e2e tests.</li>
+							<li>Customizable (Material Design spec bounds)</li>
+							<li>Theming and typography</li>
+							<li>Performance cost is minimized</li>
+							<li>Browser support recent major version - 1 </li>
+						</ul>
+					</section>
+					
+					<section id="angular-material-components">
+						<h2>Components</h2>
+						<img data-src="img/angular-material-components.gif" class="img-no-border" />
+					</section>
+					
+					<section id="angular-cdk">
+						<h2>Angular cdk</h2>
+						<ul>
+							<li>Guestures</li>
+							<li>Overlays</li>
+							<li>Responsive</li>
+							<li>Accessiblity</li>			
+							<li>Unstyled</li>				
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section id="state-management">
+							<h2>state management</h2>
+							<div>	
+								<img width="20%" data-src="img/logo-ngrx.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="20%" data-src="img/logo-angular-redux.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="20%" data-src="img/logo-redux-observable.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+					</section>
+					<section id="ngrx">
+							<h2>ngrx reactive store	</h2>
+							<img width="50%" data-src="img/logo-ngrx.png" class="img-no-border"/>
+					</section>
+					
+					<section id="ngrx-diagram">
+							<h2>ngrx dataflow</h2>
+							<img width="80%" data-src="img/ngrx-diagram.png" class="img-no-border"/>
+					</section>
+
+					<section id="what-is-new">
+						<h2>Features</h2>
+						<ul>
+							<li>Lazy loading</li>
+							<li>Testable</li>
+							<li>Router integration</li>
+							<li>Redux devtools</li>
+							<li>Minimum boilerplate</li>
+						</ul>
+					</section>
+					
+					<section id="ngrx-redux-dev-tools">					
+						<h2>Redux devtools</h2>
+						<img data-src="img/angular-ngrx.gif" class="img-no-border" />
+					</section>
+					
+					<section id="rxjs-behaviorsubject">
+							<h2>Rxjs BehaviorSubject</h2>
+							<div>	
+								<img width="20%" data-src="img/logo-rxjs.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+					</section>
+					
+					<section id="demo">
+							<h2>demo</h2>
+					</section>
+				</section>
+				
+				<section>
+					<section id="links" style="white-space: nowrap">
+						<h3>Links</h3>
+						<a href="https://angular.io" target="_blank">
+						https://angular.io
+						</a>
+						<br />
+						<a href="https://github.com/angular/angular" target="_blank">
+						https://github.com/angular/angular
+						</a>
+						<br />							
+						<a href="https://angular.io/guide/styleguide" target="_blank">https://angular.io/guide/styleguide</a>
+						<br />					
+						<a href="https://github.com/angular/angular-cli" target="_blank">https://github.com/angular/angular-cli</a>
+						<br />
+						<a href="https://material.angular.io" target="_blank">
+							https://material.angular.io
+						</a>
+						<br />
+						<a href="https://github.com/nrwl/nx" target="_blank">
+							https://github.com/nrwl/nx	
+						</a>
+						<br />
+						<a href="https://github.com/ngrx/platform" target="_blank">
+							https://github.com/ngrx/platform
+						</a>
+						<br />
+						<a href="https://stackblitz.com/fork/angular-gitter" target="_blank">
+							https://stackblitz.com/fork/angular-gitter
+						</a>
+						<br />
+						<a href="https://github.com/kuncevic/angular-httpclient-examples" target="_blank">
+							https://github.com/kuncevic/angular-httpclient-examples
+						</a>
+					</section>
+					
+					<section id="any-questions">
+						<div style="display:inline-block;">
+							<img width="26%" data-src="img/logo-angular.png" class="img-no-border" style="display:inline-block;vertical-align:middle;"/><h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
+						</div>
+						<h2>questions ?</h2>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
