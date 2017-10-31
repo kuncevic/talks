@@ -78,3 +78,11 @@ a:active.line-through {
 .list-type-a {
 	list-style-type: lower-alpha !important;
 }
+
+section img.max-width-200 {
+	max-width:200% !important;
+}
+
+section img.max-width-120 {
+	max-width:120% !important;
+}
