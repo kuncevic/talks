@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## Alt.NET:
+
+31 October 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html) 
+
 ## NgSydney:  
 
 13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)  
