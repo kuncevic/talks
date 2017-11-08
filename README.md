@@ -10,7 +10,7 @@
 
 ## [NgSydney](https://www.meetup.com/ng-sydney):  
 
-08 November 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html) 
+08 November 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)  
 13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)  
 10 May 2017: [NgModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)  
 09 November 2016: [Getting sarted with angular material 2](https://kuncevic.github.io/presentations/getting-sarted-with-angular-material-2.html)  
