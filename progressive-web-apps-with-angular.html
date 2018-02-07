@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+	
+		<title>Progressive Web Apps with Angular</title>
+		
+		<link rel="icon" type="image/x-icon" href="fi/angular.ico">
+
+		<meta name="description" content="progressive web apps, pwa, angular, service workers">
+		<meta name="author" content="Aliaksei Kuncevic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/angular.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<link rel="stylesheet" href="lib/css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section id="about">
+						<br />
+						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></h2>
+						<p><small>Software Engeneer/Angular Consultant</small></p>
+						<div style="position:relative;">
+							<div style="position:absolute; left:70px;">
+								<img width="13%" data-src="img/logo-typescript.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="13%" data-src="img/logo-angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+						</div>
+						<br /><br />
+						<div class="parent">
+							<div class="left">
+								<p>
+									<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+									<br />
+									<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+									<br />
+									<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+								</p>
+							</div>
+							<div class="right">
+								<small>
+									<p>v 1.0 (08/02/2018)</p>
+								</small>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="intro">
+					<img width="50%" data-src="img/angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					<h2>PWA with Angular</h2>
+					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></small></p>
+							
+					<div class="parent">
+						<div class="left">
+							<p>
+								<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+								<br />
+								<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+								<br />
+								<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+							</p>
+						</div>
+						<div class="right">
+							<small>
+								<p>v 1.0 (08/02/2018)</p>
+							</small>
+						</div>
+					</div>
+				</section>
+				<section>		
+					<section id="what-is-pwa">
+						<h2>What is</h2>
+						<img width="50%" data-src="img/logo-pwa_.png" class="img-no-border margin-left-15" />
+					</section>
+					
+					<section id="wikipedia-pwa">					
+						<p>Progressive web apps (PWAs) are web applications that are regular web pages or websites, but can appear to the user like traditional applications or native mobile applications. The application type attempts to combine features offered by most modern browsers with the benefits of mobile experience.</p>
+						<a href="https://en.wikipedia.org/wiki/Progressive_web_app" target="_blank">(c) Wikipedia</a>
+					</section>		
+					
+					<section id="pwa-common-features">
+						<h2>PWA experiences</h2>				
+						<ul>
+							<li>Reliable (load instantly)</li>
+							<li>Engaging (feel like a natural app)</li>
+							<li>Fast (respond quickly to user interactions)</li>
+						</ul>
+					</section>
+					
+					<section id="pwa-reliable">			
+						<h2>Reliable</h2>
+							Cache, network state
+						</ul>
+					</section>
+					
+					<section id="pwa-engaging">			
+						<h2>Engaging</h2>
+							Installable, user home screen, push notifications
+					</section>
+					
+					<section id="pwa-fast">			
+						<h2>Fast</h2>
+							53% of users will abandon a site if it takes longer than 3 seconds to load
+						</ul>
+					</section>
+					
+					<section id="modern-browser-features">
+						<h2>Latest modern browser features</h2>
+						<a href="https://whatwebcando.today" target="_blank">whatwebcando.today</a>
+					</section>
+				</section>
+				<section>
+					<section id="pwa-status-edge">
+						<h2>Edge</h2>
+						<img width="50%" data-src="img/pwa-edge.png" class="img-no-border margin-left-15"/>
+						<!-- <a href="https://blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10" target="_blank">blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10</a> -->
+					</section>
+					<section id="pwa-status-safari">
+						<h2>Firefox</h2>
+						<img width="50%" data-src="img/pwa-ff.png" class="img-no-border margin-left-15"/>
+						<!-- <a href="https://hacks.mozilla.org/2018/01/firefox-58-the-quantum-era-continues" target="_blank"> -->
+						<!-- hacks.mozilla.org/2018/01/firefox-58-the-quantum-era-continues</a> -->
+					</section>
+					<section id="pwa-status-firefox">
+						<h2>Safari</h2>
+						<img width="50%" data-src="img/pwa-ios.png" class="img-no-border margin-left-15"/>
+						<!-- <a href="https://twitter.com/rmondello/status/956256845311590400" target="_blank"> -->
+						<!-- twitter.com/rmondello/status/956256845311590400 -->
+						<!-- </a> -->
+						<!-- <a href="https://www.apple.com/newsroom/2018/01/apple-previews-ios-11-3" target="_blank"> -->
+						<!-- apple.com/newsroom/2018/01/apple-previews-ios-11-3 -->
+						<!-- </a> -->
+					</section>					
+				</section>
+				
+				<section>
+					<section id="angular">
+						<h2>Angular</h2>
+						<img width="40%" data-src="img/logo-angular.png" class="img-no-border"/>
+					</section>
+					
+					<section id="angular-5">
+						<h2>Angular</h2>
+						<img width="40%" data-src="img/logo-angular-5.png" class="img-no-border"/>
+						<br />
+						<span>@angular/service-worker</span>
+					</section>
+					
+					<section id="angular-pwa">
+						<h2>Angular PWA</h2>
+						<img width="40%" data-src="img/logo-angular-pwa.png" class="img-no-border"/>
+						<br />
+						<a href="https://angular.io/guide/service-worker-intro" target="_blank">
+						angular.io/guide/service-worker-intro
+						</a>
+					</section>
+					
+					<section id="angular-cli">
+						<h2>Angular cli</h2>
+						<img width="40%" data-src="img/logo-angular-cli.png" class="img-no-border" />
+					</section>
+					
+					<section id="angular-cli-fetures">
+						<h2>Features</h2>
+						<ul>
+							<li class="fragment highlight-green">PWA Support (CLI v.1.6+)</li>
+							<li>Scaffolding (minimize boilerplate)</li>
+							<li>Run unit and e2e tests</li>
+							<li>Linting (tslint, codelyzer)</li>
+							<li>Transpiling TypeScript</li>
+							<li>Compress assets</li>
+							<li>Compiling LESS/SASS</li>
+							<li>Webpack (dev, prod builds, code split)</li>
+							<li>Threes Shaking</li>
+							<li>Build Optimizeration/Minification</li>
+							<li>Produce CSS and JS bundles</li>
+						</ul>
+					</section>
+					
+					<section id="angular-cli-experience">
+						<h2 class="nowrap">Developer experience</h2>
+						<ul>
+							<li>No need to implement service worker yourself</li>
+							<li>Angular aware service worker</li>	
+							<li>Refresh on browser tab reload</li>
+							<li>Config-driven</li>									
+						<ul/>
+					</section>
+					
+					<section id="angular-cli-usage">
+						<h2>usage</h2>
+						<pre><code class="hljs">npm install -g @angular/cli
+ng new my-app --service-worker
+cd my-app
+ng build --prod</code></pre>
+					</section>
+					
+					<section id="angular-cli-pwa-output">
+						<h2>build output</h2>
+						<img width="65%" data-src="img/angular-cli-pwa-bundles.png" class="img-no-border" />
+					</section>
+					
+					<section id="angular-cli-sw-code">
+						<h2>Code example</h2>
+						<pre><code class="hljs">import { SwPush } from '@angular/service-worker';
+
+@Component({
+  selector: 'app-control-push',
+  templateUrl: './control-push.component.html',
+  styleUrls: ['./control-push.component.css']
+})
+export class ControlPushComponent {
+  constructor(private swPush: SwPush) { }
+
+  showMessages() {
+    this.swPush.messages
+      .subscribe(message => {
+        console.log('[App] Push message received', message);
+      });
+  }
+}</code></pre>
+					</section>
+					
+					<section id="angular-cli-pwa-config">
+						<h2>Configuraton</h2>
+												<pre><code class="hljs">{
+  "index": "/index.html",
+  "appData": {
+    "name": "app v1",
+    "description": "sample app"
+  },
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html"
+      ],
+      "versionedFiles": [
+        "/*.bundle.css",
+        "/*.bundle.js",
+        "/*.chunk.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }, {
+    "name": "fonts",
+    "resources": {
+      "urls": [
+        "https://fonts.googleapis.com/**",
+        "https://fonts.gstatic.com/**"
+      ]
+    }
+  }],
+  "dataGroups": [{
+      "name": "api-timeline",
+      "urls": [
+        "/timeline"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 100,
+        "maxAge": "2d",
+        "timeout": "10s"
+      }
+    },
+    {
+      "name": "api-history",
+      "urls": [
+        "/history"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "5d"
+      }
+    }
+  ]
+}
+</code></pre>
+					</section>
+				
+				</section>
+				
+				<section id="demo">
+						<h2>demo</h2>
+				</section>
+				
+				<section>
+					<section id="links" class="nowrap">
+						<h3>Links</h3>
+						<div style="margin-left:-50px;">
+							<a href="https://angular.io/guide/service-worker-intro" target="_blank">
+							angular.io/guide/service-worker-intro
+							</a>
+							<br />
+							<a href="https://whatwebcando.today" target="_blank">
+							whatwebcando.today
+							</a>
+							<br />
+							<a href="https://developers.google.com/web/progressive-web-apps" target="_blank">
+							developers.google.com/web/progressive-web-apps
+							</a>
+							<br />							
+							<a href="https://blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10" target="_blank">
+							blogs.windows.com/msedgedev/2018/02/06/welcoming-progressive-web-apps-edge-windows-10
+							</a>
+							<br />					
+							<a href="https://hacks.mozilla.org/2018/01/firefox-58-the-quantum-era-continues" target="_blank">
+							hacks.mozilla.org/2018/01/firefox-58-the-quantum-era-continues
+							<br />					
+							<a href="https://blog.mozilla.org/firefox/progressive-web-apps-whats-big-deal" target="_blank">
+							blog.mozilla.org/firefox/progressive-web-apps-whats-big-deal
+							</a>
+							<br />
+							<a href="https://twitter.com/rmondello/status/956256845311590400" target="_blank">
+							twitter.com/rmondello/status/956256845311590400
+							</a>
+							<br />
+							<a href="https://github.com/webmaxru/pwatter" target="_blank">
+								github.com/webmaxru/pwatter
+							</a>
+						<div>
+					</section>
+					
+					<section id="any-questions">
+						<div style="display:inline-block;">
+							<img width="26%" data-src="img/logo-angular.png" class="img-no-border" style="display:inline-block;vertical-align:middle;"/><h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
+						</div>
+						<h2>questions ?</h2>
+						<br />
+						<div style="display:inline-block;">
+							<img width="10%" data-src="img/logo-twitter.png" class="img-no-border" style="display:inline-block;vertical-align:middle;" /><a href="http://twitter.com/kuncevic" target="_blank" style="padding:.2em 0 0 .2em;">@kuncevic</a>
+						</div>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

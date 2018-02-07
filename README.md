@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [PWA Sydney](https://www.meetup.com/Sydney-Progressive-Web-Apps-SydPWA/):
+
+08 Feb 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/progressive-web-apps-with-angular.html) 
+
 ## [Node Sydney](https://www.meetup.com/node-sydney):
 
 02 November 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html) 
