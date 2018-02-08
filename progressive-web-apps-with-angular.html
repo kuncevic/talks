@@ -100,6 +100,7 @@
 					<section id="what-is-pwa">
 						<h2>What is</h2>
 						<img width="50%" data-src="img/logo-pwa.png" class="img-no-border margin-left-15" />
+						<h2></h2>
 					</section>
 					
 					<section id="wikipedia-pwa">					
@@ -334,7 +335,7 @@ export class ControlPushComponent {
 				
 				<section>
 					<section id="angular-cli-sw-fetch">
-							<h2>rm ngsw-worker.js</h2>
+							<h2>fetch manifest</h2>
 							<pre><code  data-trim data-noescape class="hljs">async fetchLatestManifest() {
   const res = await this.safeFetch(
     this.adapter.newRequest('ngsw.json?ngsw-cache-bust=' + Math.random())
@@ -350,11 +351,19 @@ export class ControlPushComponent {
   return res.json();
 }</code></pre>
 					</section>
-					<section id="angular-cli-sw-renove">
-						<h2>rm ngsw-worker.js</h2>
+					
+					<section id="angular-cli-sw-remove">
+						<h2>remove</h2>
 						<ul>
 							<li>ng set apps.0.serviceWorker=false</li>
 							<li>Make sure server respond with 404 for ngsw.json</li>
+						<ul/>
+					</section>
+					
+					<section id="angular-cli-sw-debug">
+						<h2>debug</h2>
+						<ul>
+							<li>http://localhost:[your-port]/ngsw/state</li>
 						<ul/>
 					</section>
 				</section>
@@ -364,7 +373,7 @@ export class ControlPushComponent {
 						<h3>Links</h3>
 						<div style="margin-left:-50px;">
 							<a href="https://angular.io/guide/service-worker-intro" target="_blank">
-							angular.io/guide/service-worker-intro`
+							angular.io/guide/service-worker-intro
 							</a>
 							<br />
 							<a href="https://whatwebcando.today" target="_blank">
