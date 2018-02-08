@@ -216,12 +216,15 @@
 						<ul/>
 					</section>
 					
-					<section id="angular-cli-usage">
-						<h2>usage</h2>
+					<section id="angular-cli-pwa-start">
+						<h2>how to start</h2>
 						<pre><code class="hljs">npm install -g @angular/cli
 ng new my-app --service-worker
 cd my-app
 ng build --prod</code></pre>
+					<a href="https://angular.io/guide/service-worker-intro" target="_blank">
+							angular.io/guide/service-worker-intro
+					</a>
 					</section>
 					
 					<section id="angular-cli-pwa-output">
@@ -345,7 +348,7 @@ export class ControlPushComponent {
 						<h2>rm ngsw-worker.js</h2>
 						<ul>
 							<li>ng set apps.0.serviceWorker=false</li>
-							<li>Make sure ngsw.json respond with 404</li>		
+							<li>Make sure server respond with 404 for ngsw.json</li>
 						<ul/>
 					</section>
 				</section>
