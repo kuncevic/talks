@@ -379,6 +379,14 @@ export class ControlPushComponent {
 				</section>
 				
 				<section>
+					<section id="angular-cli-sw-remove">
+						<h2>remove</h2>
+						<ul>
+							<li>ng set apps.0.serviceWorker=false</li>
+							<li>Make sure server respond with 404 for ngsw.json</li>
+						</ul>
+					</section>
+					
 					<section id="angular-cli-sw-fetch">
 							<h2>fetch manifest</h2>
 							<pre><code  data-trim data-noescape class="hljs">async fetchLatestManifest() {
@@ -395,14 +403,6 @@ export class ControlPushComponent {
   this.lastUpdateCheck = this.adapter.time;
   return res.json();
 }</code></pre>
-					</section>
-					
-					<section id="angular-cli-sw-remove">
-						<h2>remove</h2>
-						<ul>
-							<li>ng set apps.0.serviceWorker=false</li>
-							<li>Make sure server respond with 404 for ngsw.json</li>
-						</ul>
 					</section>
 					
 					<section id="sw-source-code" class="nowrap">
