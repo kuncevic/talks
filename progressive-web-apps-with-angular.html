@@ -47,7 +47,7 @@
 				<section>
 					<section id="about">
 						<br />
-						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></h2>
+						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></h2>
 						<p><small>Software Engeneer/Angular Consultant</small></p>
 						<div style="position:relative;">
 							<div style="position:absolute; left:70px;">
@@ -68,6 +68,7 @@
 							</div>
 							<div class="right">
 								<small>
+									<p>v 1.1 (27/02/2018)</p>
 									<p>v 1.0 (08/02/2018)</p>
 								</small>
 							</div>
@@ -77,7 +78,7 @@
 				<section id="intro">
 					<img width="50%" data-src="img/angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					<h2>PWA with Angular</h2>
-					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevic</a></small></p>
+					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></small></p>
 							
 					<div class="parent">
 						<div class="left">
@@ -91,6 +92,7 @@
 						</div>
 						<div class="right">
 							<small>
+								<p>v 1.1 (27/02/2018)</p>
 								<p>v 1.0 (08/02/2018)</p>
 							</small>
 						</div>
@@ -190,6 +192,25 @@
 						<span>@angular/service-worker</span>
 					</section>
 					
+					<section id="angular-pwa">
+						<h2>Angular PWA</h2>
+						<img width="40%" data-src="img/logo-angular-pwa.png" class="img-no-border"/>
+						<br />
+						<a href="https://angular.io/guide/service-worker-intro" target="_blank">
+						angular.io/guide/service-worker-intro
+						</a>
+					</section>
+					
+					<section id="angular-cli-experience">
+						<h2 class="nowrap">Developer experience</h2>
+						<ul>
+							<li>No need to implement service worker yourself</li>
+							<li>Angular-aware service worker</li>
+							<li>Config-driven</li>
+							<li>Refresh on browser tab reload</li>								
+						</ul>
+					</section>
+					
 					<section id="angular-cli">
 						<h2>Angular cli</h2>
 						<img width="40%" data-src="img/logo-angular-cli.png" class="img-no-border" />
@@ -212,25 +233,6 @@
 						</ul>
 					</section>
 					
-					<section id="angular-pwa">
-						<h2>Angular PWA</h2>
-						<img width="40%" data-src="img/logo-angular-pwa.png" class="img-no-border"/>
-						<br />
-						<a href="https://angular.io/guide/service-worker-intro" target="_blank">
-						angular.io/guide/service-worker-intro
-						</a>
-					</section>
-					
-					<section id="angular-cli-experience">
-						<h2 class="nowrap">Developer experience</h2>
-						<ul>
-							<li>No need to implement service worker yourself</li>
-							<li>Angular-aware service worker</li>
-							<li>Config-driven</li>
-							<li>Refresh on browser tab reload</li>								
-						<ul/>
-					</section>
-					
 					<section id="angular-cli-pwa-start">
 						<h2>how to start</h2>
 						<pre><code class="hljs">npm install -g @angular/cli
@@ -249,7 +251,7 @@ ng build --prod</code></pre>
 					
 					<section id="angular-cli-sw-code">
 						<h2>Code example</h2>
-						<pre><code class="hljs">import { SwPush } from '@angular/service-worker';
+						<pre><code data-trim data-noescape class="hljs">import { SwPush } from '@angular/service-worker';
 
 @Component({
   selector: 'app-control-push',
@@ -261,7 +263,7 @@ export class ControlPushComponent {
 
   showMessages() {
     this.swPush.messages
-      .subscribe(message => {
+      <mark>.subscribe(message => {</mark>
         console.log('[App] Push message received', message);
       });
   }
@@ -335,6 +337,21 @@ export class ControlPushComponent {
 }</code></pre>
 					</section>
 					
+					<section id="angular-cli-sw-debug">
+						<h2>debug</h2>
+						<ul>
+							<li>http://localhost:[your-port]/ngsw/state</li>
+						</ul>
+					</section>
+					
+					<section id="angular-cli-sw-debug-info">
+						<h2>debug info</h2>
+						<img width="65%" data-src="img/pwa-debug-info.png" class="img-no-border" />
+					</section>
+				
+				</section>
+				
+				<section>
 					<section id="lighthouse">
 						<h2 class="nowrap">Lighthouse </h2>
 						<img width="70%" data-src="img/logo-lighthouse.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
@@ -345,7 +362,16 @@ export class ControlPushComponent {
 						<h2 class="nowrap">Lighthouse Report</h2>
 						<img width="65%" data-src="img/lighthouse-report.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
-				
+					
+					<section id="hnpwa">
+						<img width="65%" data-src="img/logo-hnpwa.png" class="img-no-border" />
+						<br />
+						<span class="fragment">Hacker News readers as Progressive Web Apps</span>
+						<br />
+						<a href="https://hnpwa.com" target="_blank">
+							hnpwa.com
+						</a>
+					</section>
 				</section>
 				
 				<section id="demo">
@@ -376,15 +402,28 @@ export class ControlPushComponent {
 						<ul>
 							<li>ng set apps.0.serviceWorker=false</li>
 							<li>Make sure server respond with 404 for ngsw.json</li>
-						<ul/>
+						</ul>
 					</section>
 					
-					<section id="angular-cli-sw-debug">
-						<h2>debug</h2>
+					<section id="sw-source-code" class="nowrap">
+						<h2>ngsw code</h2>
 						<ul>
-							<li>http://localhost:[your-port]/ngsw/state</li>
-						<ul/>
+							<li>
+								<a href="my-pwa-app\node_modules\@angular\service-worker" target="_blank">
+										my-pwa-app\node_modules\@angular\service-worker
+								</a>
+							</li>
+							<li>
+								dist folder 'ngsw-worker.js'
+							</li>
+							<li>
+								<a href="https://github.com/angular/angular/tree/master/packages" target="_blank">
+										github.com/angular/angular/tree/master/packages
+								</a>
+							</li>
+						</ul>
 					</section>
+					
 				</section>
 				
 				<section>
@@ -418,11 +457,19 @@ export class ControlPushComponent {
 							twitter.com/rmondello/status/956256845311590400
 							</a>
 							<br />
+							<a href="https://github.com/angular/angular/tree/master/packages" target="_blank">
+										github.com/angular/angular/tree/master/packages
+							</a>
+							<br />	
 							<a href="https://github.com/webmaxru/pwatter" target="_blank">
 								github.com/webmaxru/pwatter
 							</a>
 							<br />
-							<a href="https://hnpwa.com/" target="_blank">
+							<a href="https://developers.google.com/web/tools/lighthouse" target="_blank">
+								developers.google.com/web/tools/lighthouse
+							</a>
+							<br />
+							<a href="https://hnpwa.com" target="_blank">
 								hnpwa.com
 							</a>
 						<div>
