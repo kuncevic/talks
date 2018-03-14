@@ -18,7 +18,7 @@
 
 ## [NgSydney](https://www.meetup.com/ng-sydney):  
 
-14 March 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/presentations/progressive-web-apps-with-angular.html) 
+14 March 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/presentations/progressive-web-apps-with-angular.html)   
 08 November 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)  
 13 September 2017: [NGRX 4 features and migration path](https://kuncevic.github.io/presentations/ngrx-4-features-and-migration-path.html)  
 10 May 2017: [NgModules, lazy loading and fun with bundle analyzing](https://kuncevic.github.io/presentations/ng-modules-lazy-loading-and-fun-with-bundle-analyzing.html)  
