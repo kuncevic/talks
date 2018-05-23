@@ -169,6 +169,28 @@
 							<li>Promises</li>
 						</ul>
 					</section>
+					<section id="ngxs-action-life-cycles">
+						<h2>Action Life Cycles</h2>
+						<ul>
+							<li>ofAction</li>
+							<li>ofActionDispatched</li>
+							<li>ofActionSuccessful</li>
+							<li>ofActionCanceled</li>
+							<li>ofActionErrored</li>
+						</ul>
+					</section>
+					<section id="ngxs-patch-state">
+						<h2>Patch State</h2>
+						<pre><code data-trim data-noescape class="hljs">@Action(LoadItems)
+  LoadItems(sc: StateContext<ItemsStateModel>) {
+    <mark>sc.patchState({ loading: true });</mark>
+    return this.service
+      .getItems()
+      .pipe(
+        tap(data => sc.dispatch(new LoadItemsSuccess(data)))
+      );
+  }</code></pre>
+					</section>
 					<section id="ngxs-concepts">
 						<h2>Concepts</h2>
 						<ul>
@@ -181,11 +203,7 @@
 					
 					<section id="ngxs-store-code">
 						<h2>ngxs store</h2>
-						<pre><code data-trim data-noescape class="hljs">import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { of } from 'rxjs';
-import { tap } from 'rxjs/operators';
-
-export class AddTodo {
+						<pre><code data-trim data-noescape class="hljs">export class AddTodo {
   static type = 'AddTodo';
 
   constructor(public readonly payload: string) {}
@@ -221,62 +239,6 @@ export class TodoState {
   removeTodo({ getState, setState }: StateContext<string[]>, { payload }: RemoveTodo) {
     setState(getState().filter((_, i) => i !== payload));
   }
-}
-
-export class SetPrefix {
-  static type = 'SetPrefix';
-}
-
-export class LoadData {
-  static type = 'LoadData';
-}
-
-@State<TodoStateModel>({
-  name: 'todos',
-  defaults: {
-    todo: [],
-    pizza: { model: undefined }
-  },
-  children: [TodoState]
-})
-export class TodosState {
-  @Selector()
-  static pizza(state: TodoStateModel) {
-    return state.pizza;
-  }
-
-  @Action(SetPrefix)
-  setPrefix({ getState, setState, patchState }) {
-    const state = getState();
-    const pizza1 = state.pizza.model.toppings;
-    patchState({
-      pizza: {
-        model: {
-          toppings: 'Mr. ' + pizza1
-        }
-      }
-    });
-  }
-
-  @Action(LoadData)
-  loadData({ patchState }) {
-    const data = {
-      toppings: 'pineapple',
-      crust: 'medium',
-      extras: [false, false, true]
-    };
-    return of(data).pipe(
-      tap((vals: any) => {
-        patchState({
-          pizza: {
-            model: {
-              ...vals
-            }
-          }
-        });
-      })
-    );
-  }
 }</code></pre>
 					</section>	
 					
@@ -308,6 +270,10 @@ export class TodosState {
 							en.wikipedia.org/wiki/State_management
 							</a>
 							<br />
+							<a href="https://medium.com/@amcdnl/announcing-ngxs-3-0-ee00969292d" target="_blank">
+							medium.com/@amcdnl/announcing-ngxs-3-0-ee00969292d
+							</a>
+							<br />
 							<a href="http://ngxs.io" target="_blank">
 							ngxs.io
 							</a>
@@ -322,10 +288,6 @@ export class TodosState {
 							<br />
 							<a href="https://twitter.com/dee_bloo/status/991146546837311489" target="_blank">
 							twitter.com/dee_bloo/status/991146546837311489
-							</a>
-							<br />
-							<a href="http://reactivex.io/documentation/subject.html" target="_blank">
-							reactivex.io/documentation/subject.html
 							</a>
 							<br />
 							<a href="https://gist.github.com/search?utf8=✓&q=state+management+rxjs" target="_blank">
