@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Responsive apps with Flex-Layout</title>
+
+		<link rel="icon" type="image/x-icon" href="fi/angular.ico">
+
+		<meta name="description" content="cqrs, redux, ngrx, angular, event-sourcing, state-management">
+		<meta name="author" content="Aliaksei Kuncevic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/angular.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="lib/css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section id="about">
+						<br />
+						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></h2>
+						<p><small>Software Engineer/Angular Consultant</small></p>
+						<div style="position:relative;">
+							<div style="position:absolute; left:70px;">
+								<img width="13%" data-src="img/logo-typescript.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="13%" data-src="img/logo-angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+						</div>
+						<br /><br />
+						<div class="parent">
+							<div class="left">
+								<p>
+									<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+									<br />
+									<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+									<br />
+									<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+								</p>
+							</div>
+							<div class="right">
+								<small>
+									<p>v 1.0 (11/07/2018)</p>
+								</small>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="intro">
+					<img width="50%" data-src="img/angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					<h2>Responsive apps with Flex-Layout</h2>
+					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></small></p>
+
+					<div class="parent padding-top-0px">
+						<div class="left">
+							<p>
+								<a href="http://twitter.com/kuncevic" target="_blank">http://twitter.com/kuncevic</a>
+								<br />
+								<a href="http://github.com/kuncevic" target="_blank">http://github.com/kuncevic</a>
+								<br />
+								<a href="http://linkedin.com/in/kuncevic" target="_blank">http://linkedin.com/in/kuncevic</a>
+							</p>
+						</div>
+						<div class="right">
+							<small>
+								<p>v 1.0 (11/07/2018)</p>
+							</small>
+						</div>
+					</div>
+				</section>
+				<section>
+					<section id="typical-responsive-app">
+						<h2>Responsive design</h2>
+						<img width="100%" data-src="img/flex-layout/responsive-media-queries.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+						<a href="https://internetingishard.com/html-and-css/responsive-design" target="_blank">internetingishard.com/html-and-css/responsive-design</a>
+					</section>
+
+					<section id="mobile-first-design">
+						<h2>Responsive content</h2>
+						<img width="80%" data-src="img/flex-layout/mobile-first-design.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+						<!-- <video loop="" muted="" preload="metadata" tabindex="0">
+							<source data-src="img/flex-layout/layout-responsive-breakpoints.mp4" src="img/flex-layout/layout-responsive-breakpoints.mp4" type="video/mp4">
+						</video> -->
+					</section>
+
+					<section id="mobile-first-design-shrink">
+						<h2>Responsive content</h2>
+						<img width="150%" data-src="img/flex-layout/layout-responsive-breakpoints.gif" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					</section>
+
+					<section id="how-responsive-websites-work">
+						<h2>Media queries</h2>
+						<img width="68%" data-src="img/flex-layout/how-responsive-websites-work.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					</section>
+
+					<section>
+					<h2>Media query</h2>
+					<pre><code data-trim data-noescape class="hlcss">// For desktop
+@media only screen and (min-width: 768px) {
+    .elem-1 { width: 8.33%; }
+    .elem-2 { width: 16.66%; }
+    .elem-3 { width: 25%; }
+    .elem-4 { width: 33.33%; }
+    .elem-5 { width: 41.66%; }
+    .elem-6 { width: 50%; }
+    .elem-7 { width: 58.33%; }
+    .elem-8 { width: 66.66%; }
+    .elem-9 { width: 75%; }
+    .elem-10 { width: 83.33%; }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)  { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)  { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)  { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section id="flex-layout">
+						<h2>Angular Flex-Layout</h2>
+					</section>
+					<section id="flex-layout-docs">
+						<p>The Flex Layout engine intelligently automates the process of applying appropriate Flexbox CSS to browser view hierarchies.</p>
+						<p>The real power of Flex Layout, however, is its responsive engine. The Responsive API enables developers to easily specify different layouts, sizing, visibilities for different viewport sizes and display devices.</p>
+						<a href="https://github.com/angular/flex-layout#angular-flex-layout" target="_blank">(c) docs</a>
+					</section>
+					<section id="can-i-use-flex-box">
+						<h2>Flexbox css</h2>
+						<img width="100%" data-src="img/flex-layout/caniuse-flex-box.png" class="img-no-border margin-left-15"/>
+						<a href="https://caniuse.com/#search=flexbox" target="_blank">caniuse.com/#search=flexbox</a>
+					</section>
+					<section id="a-guide-to-flexbox">
+						<h2>Flexbox css</h2>
+						<img width="100%" data-src="img/flex-layout/flexbox-basics-and-terminology.gif" class="img-no-border margin-left-15"/>
+						<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox" target="_blank">css-tricks.com/snippets/css/a-guide-to-flexbox</a>
+						<a href="https://flexboxzombies.com/p/flexbox-zombies" target="_blank">flexboxzombies.com/p/flexbox-zombies</a>
+						<a href="https://flexboxfroggy.com" target="_blank">flexboxfroggy.com</a>
+					</section>
+					<section id="flex-layout-install">
+							<h2>Angular Flex-Layout</h2>
+							<pre><code data-trim data-noescape class="hljs">npm i @angular/flex-layout
+// OR
+yarn add @angular/flex-layout</code></pre>
+<pre><code data-trim data-noescape class="hljs">imports: [
+  FlexLayoutModule.withConfig({useColumnBasisZero: false}),
+],</code></pre>
+						</section>
+		<section id="flex-layout-example1">
+			<h2>Layout Example</h2>
+			<pre fragment current-visible><code data-trim class="html"><div class="content" fxLayout="row" fxFlexFill>
+  <div fxFlex="15" class="sec1">
+    first-section
+  </div>
+  <div fxFlex="30" class="sec2">
+    second-section
+  </div>
+  <div fxFlex="55" class="sec3">
+    third-section
+  </div>
+</div></code></pre>
+	<a href="https://github.com/angular/flex-layout/wiki/Responsive-API" target="_blank">github.com/angular/flex-layout/wiki/Responsive-API</a>
+		</section>
+		<section id="flex-layout-example2">
+			<h2>Layout Example</h2>
+			<pre fragment current-visible><code data-trim class="html"><div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+  <div fxFlex="15" class="sec1" fxFlex.xs="55">
+    first-section
+  </div>
+  <div fxFlex="30" class="sec2" >
+    second-section
+  </div>
+  <div fxFlex="55" class="sec3" fxFlex.xs="15">
+    third-section
+  </div>
+</div></code></pre>
+				<a href="https://github.com/angular/flex-layout/wiki/Responsive-API" target="_blank">github.com/angular/flex-layout/wiki/Responsive-API</a>
+					</section>
+				</section>
+			</section>
+				<section>
+					<section id="flex-layout-beta.16">
+						<h2>6.0.0-beta.16</h2>
+					</section>
+					<section id="flex-layout-grid">
+						<h2>6.0.0-beta.16</h2>
+						<p>With Beta 16, we have added support + API for CSS Grid. Now @angular/flex-layout supports both Flexbox and CSS Grid layouts.</p>
+						<a href="https://github.com/angular/flex-layout/blob/master/CHANGELOG.md" target="_blank">
+							(c) CHANGELOG.md
+						</a>
+					</section>
+					<section id="can-i-use-css-grid">
+						<h2>Css grid layout</h2>
+						<img width="100%" data-src="img/flex-layout/caniuse-css-grid.png" class="img-no-border margin-left-15"/>
+						<a href="https://caniuse.com/#search=grid" target="_blank">caniuse.com/#search=grid</a>
+					</section>
+					<section id="complete-guide-grid">
+						<h2>Css grid layout</h2>
+						<img width="100%" data-src="img/flex-layout/gss-grid-and-terminology.gif" class="img-no-border margin-left-15"/>
+						<a href="https://css-tricks.com/snippets/css/complete-guide-grid" target="_blank">css-tricks.com/snippets/css/complete-guide-grid</a>
+						<a href="https://cssgridgarden.com" target="_blank">cssgridgarden.com</a>
+					</section>
+				</section>
+
+				<section id="demo">
+						<h2>demo</h2>
+				</section>
+
+				<section>
+					<section id="links" class="nowrap">
+						<h3>Links</h3>
+						<div style="margin-left:-50px;">
+							<a href="https://github.com/angular/flex-layout" target="_blank">
+								github.com/angular/flex-layout
+							</a>
+							<br />
+							<a href="https://github.com/angular/flex-layout/blob/master/CHANGELOG.md" target="_blank">
+								github.com/angular/flex-layout/blob/master/CHANGELOG.md
+							</a>
+							<br />
+							<a href="https://github.com/angular/flex-layout/pull/712" target="_blank">
+								github.com/angular/flex-layout/pull/712
+							</a>
+							<br />
+							<a href="https://github.com/angular/flex-layout/wiki/Responsive-API" target="_blank">
+								github.com/angular/flex-layout/wiki/Responsive-API
+							</a>
+							<br />
+							<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox" target="_blank">
+								css-tricks.com/snippets/css/a-guide-to-flexbox
+							</a>
+							<br />
+							<a href="https://flexboxzombies.com/p/flexbox-zombies" target="_blank">
+								flexboxzombies.com/p/flexbox-zombies
+							</a>
+							<br />
+							<a href="https://flexboxfroggy.com" target="_blank">
+								flexboxfroggy.com
+							</a>
+							<br />
+							<a href="https://cssgridgarden.com" target="_blank">
+								cssgridgarden.com
+							</a>
+							<br />
+							<a href="https://www.youtube.com/watch?v=TewrxMo_QAs" target="_blank">
+								youtube.com/watch?v=TewrxMo_QAs
+							</a>
+							<br />
+							<a href="https://youtube.com/watch?v=RSIclWvNTdQ" target="_blank">
+								youtube.com/watch?v=RSIclWvNTdQ
+							</a>
+							<br />
+							<a href="https://internetingishard.com/html-and-css/responsive-design" target="_blank">
+								internetingishard.com/html-and-css/responsive-design
+							</a>
+						<div>
+					</section>
+
+					<section id="any-questions">
+						<div style="display:inline-block;">
+							<img width="26%" data-src="img/logo-angular.png" class="img-no-border" style="display:inline-block;vertical-align:middle;"/><h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
+						</div>
+						<h2>questions ?</h2>
+						<br />
+						<div style="display:inline-block;">
+							<img width="10%" data-src="img/logo-twitter.png" class="img-no-border" style="display:inline-block;vertical-align:middle;" /><a href="http://twitter.com/kuncevic" target="_blank" style="padding:.2em 0 0 .2em;">@kuncevic</a>
+						</div>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

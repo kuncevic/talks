@@ -2,6 +2,7 @@
 
 ## [NgSydney](https://www.meetup.com/ng-sydney):  
 
+11 July 2018: [Responsive angular apps with angular flex layout](https://kuncevic.github.io/presentations/responsive-angular-apps-with-angular-flex-layout.html)   
 16 May 2018: [NGXS - State Management for Angular](https://kuncevic.github.io/presentations/ngxs-state-management-for-angular.html)   
 14 March 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/presentations/progressive-web-apps-with-angular.html)   
 08 November 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)  
