@@ -12,6 +12,10 @@
 06 April 2016: Angular components and forms and databinding	// add slides  
 03 February 2016: Angular project generators and development workflow // add slides
 
+## [Sydney Web Performance](https://www.meetup.com/Sydney-Web-Performance/):
+
+09 Aug 2018: [How to improve the performance of a Single Page Application](https://kuncevic.github.io/presentations/how-to-improve-the-performance-of-a-single-page-application.html) 
+
 ## [SydJS](https://www.meetup.com/SydJS-Classic):
 
 28 Feb 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/presentations/progressive-web-apps-with-angular.html) 
