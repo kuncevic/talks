@@ -1,4 +1,4 @@
-<!doctype html>
+=<!doctype html>
 <html lang="en">
 
 	<head>
@@ -41,7 +41,7 @@
 	<body>
 
 		<div class="reveal">
-			
+
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
@@ -66,7 +66,7 @@
 							</div>
 							<div class="right">
 								<small>
-									<p>v 1.0 (08/09/2018)</p>
+									<p>v 2.0 (06/09/2018)</p>
 								</small>
 							</div>
 						</div>
@@ -86,19 +86,40 @@
 						</div>
 						<div class="right">
 							<small>
-								<p>v 1.0 (08/09/2018)</p>
+								<p>v 2.0 (06/09/2018)</p>
 							</small>
 						</div>
 					</div>
+				</section>
+				<section>
+					<section id="performance">
+						<h2>Performance</h2>
+						<img width="50%" data-src="img/web-performance/performance.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					</section>
+					<section id="page-load-statistics">
+						<h2>Statistics</h2>
+						<img width="100%" data-src="img/web-performance/page-load-research.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					</section>
+					<section id="page-load-research">
+						<h2>Research</h2>
+						<p>
+							Research on U.S. Net habits suggests that if this sentence takes longer than a second to load, many citizens will have clicked elsewhere already. If you’ve got the patience (or are European) read on for more shocking data on not dawdling. (c)
+						</p>
+						<a href="https://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales" target="_blank">How 1 second could cost Amazon $1.6 billion in sales
+						</a>
+					</section>
+					<section id="page-load-google">
+						<h2>Keep Site Speed Below 2-3 Seconds (c) Google</h2>
+					</section>
 				</section>
 				<section>
 					<section id="spa-life-cycle">
 						<h2>SPA life cycle</h2>
 						<img width="100%" data-src="img/web-performance/spa.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
-					<section  id="performance">
-						<h2>Performance</h2>
-						<img width="50%" data-src="img/web-performance/performance.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					<section id="page-load-timeline">
+						<h2>Page load timeline</h2>
+						<img width="100%" data-src="img/web-performance/browser-page-load-timeline.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
 					<section id="key-metrics">
 						<h2>Key metrics</h2>
@@ -108,45 +129,78 @@
 							<li>Time to interact</li>
 						</ul>
 					</section>
+					<section id="splow-page-load">
+						<h2>Loading...</h2>
+						<img width="70%" data-src="img/web-performance/slow-page-load.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+					</section>
 				</section>
 				<section>
 					<section id="page-load-time">
 						<h2>How do we improve the page load time?</h2>
 					</section>
-					
+
 					<section id="page-load-time-checklist">
 						<h2>Basic techniques</h2>
 						<ul>
 							<li>Minification, uglification</li>
-							<li>Bundle size optimization</li>
 							<li>Code spiting (Lazy loading)</li>
+							<li>Data urls</li>
+							<li>PWA</li>
 							<li>Images compressing</li>
-							<!-- <li>Static prerendering</li> -->
 						</ul>
 					</section>
+					<section id="angular-features">
+						<h2>Angular 2/4/5/6/7(beta)</h2>
+						<ul>
+							<li>+Minification, uglification</li>
+							<li>+Code spiting (Lazy loading)</li>
+							<li>+Data urls</li>
+							<li>+PWA</li>
+							<li>Images compressing</li>
+						</ul>
+					</section>
+					<section id="advanced-techniques">
+						<h2>Advanced techniques</h2>
+						<ul>
+							<li>+Tree shaking (rollup)</li>
+							<li>Bundle size optimization</li>
+							<li>Closure compiler</li>
+						</ul>
+					</section>
+					<section id="bundle-analyzing-result">
+							<h2>Bafore vs After</h2>
+							<img width="48%" data-src="img/bundle-before.png" />
+							<img width="48%" data-src="img/bundle-after.png" />
+						</section>
 					<section id="demo">
 						<h2>demo</h2>
 					</section>
 				</section>
-				<section>					
+				<section>
 					<section id="how-to-measure-load-time">
-						<h2>How do we measure the load time?</h2>
-						<ul>
-							<li>Start render time</li>
-							<li>Time to interact</li>
-						</ul>
+						<h2>How do we measure performance time metrics?</h2>
 					</section>
-					
+
 					<section id="lighthouse">
 						<h2>Lighthouse</h2>
 						<img width="50%" data-src="img/logo-lighthouse.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
-					
+
 					<section id="lighthouse-report">
 						<h2>Lighthouse Report</h2>
 						<img width="80%" data-src="img/web-performance/lighthouse-report.gif" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
-				</section>				
+				</section>
+
+				<section>
+					<section id="other-techniques">
+						<h2>What about the SEO?</h2>
+						<ul>
+							<li>Server-side rendering</li>
+							<li>Prerendering</li>
+						</ul>
+					</section>
+				</section>
 
 				<section id="any-questions">
 					<div style="display:inline-block;">
@@ -179,12 +233,24 @@
 								github.com/webpack-contrib/webpack-bundle-analyzer
 							</a>
 							<br />
+							<a href="https://developers.google.com/closure/" target="_blank">
+								developers.google.com/closure
+							</a>
+							<br />
 							<a href="https://developers.google.com/web/tools/lighthouse/" target="_blank">
 								developers.google.com/web/tools/lighthouse
 							</a>
 							<br />
 							<a href="https://github.com/kuncevic/angular-modular-project-structure" target="_blank">
 								github.com/kuncevic/angular-modular-project-structure
+							</a>
+							<br />
+							<a href="https://medium.com/@vikigreen/impact-of-slow-page-load-time-on-website-performance-40d5c9ce568a" target="_blank">
+								medium.com/@vikigreen/impact-of-slow-page-load-time-on-website-performance-40d5c9ce568a
+							</a>
+							<br />
+							<a href="https://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales" target="_blank">
+								fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales
 							</a>
 							<br />
 						<div>
