@@ -31,10 +31,10 @@
 
 ## [Alt.NET](https://www.meetup.com/Sydney-Alt-Net):
 
-31 October 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)
+31 Oct 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)
 
 ## [Angular Hack Day](http://angularhackday.com):
 
-22 April 2016: Angular forms and validation // add slides
+22 Apr 2016: Angular forms and validation // add slides
 
 Built with [reveal.js](https://github.com/hakimel/reveal.js)
