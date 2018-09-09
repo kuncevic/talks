@@ -121,12 +121,16 @@
 						<h2>Page load timeline</h2>
 						<img width="100%" data-src="img/web-performance/browser-page-load-timeline.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
 					</section>
+					<section id="only-page-load-time">
+						<h2>Should you measure only page load time?</h2>
+					</section>
 					<section id="key-metrics">
-						<h2>Key metrics</h2>
+						<h2>Other Key Metrics</h2>
 						<ul>
-							<li>Page load time</li>
-							<li>Start render time</li>
-							<li>Time to interact</li>
+							<li>Start render time (First paint)</li>
+							<li>First contentful paint</li>
+							<li>First meaningful paint</li>
+							<li>Time to interactive</li>
 						</ul>
 					</section>
 					<section id="splow-page-load">
@@ -136,12 +140,13 @@
 				</section>
 				<section>
 					<section id="page-load-time">
-						<h2>How do we improve the page load time?</h2>
+						<h2>How do we improve the performance metrics?</h2>
 					</section>
 
 					<section id="page-load-time-checklist">
 						<h2>Basic techniques</h2>
 						<ul>
+							<li>Webpack</li>
 							<li>Minification, uglification</li>
 							<li>Code splitting (Lazy loading)</li>
 							<li>Data urls</li>
@@ -149,22 +154,24 @@
 							<li>Images compressing</li>
 						</ul>
 					</section>
-					<section id="angular-features">
-						<h2>Angular 2/4/5/6/7(beta)</h2>
-						<ul>
-							<li>+Minification, uglification</li>
-							<li>+Code splitting (Lazy loading)</li>
-							<li>+Data urls</li>
-							<li>+PWA</li>
-							<li>Images compressing</li>
-						</ul>
-					</section>
 					<section id="advanced-techniques">
 						<h2>Advanced techniques</h2>
 						<ul>
-							<li>+Tree shaking (rollup)</li>
+							<li>Tree shaking (rollup)</li>
 							<li>Bundle size optimization</li>
 							<li>Closure compiler</li>
+						</ul>
+					</section>
+					<section id="angular-features">
+						<h2>Angular 2/4/5/6/7(beta)</h2>
+						<ul>
+							<li>Webpack</li>
+							<li>Minification, uglification</li>
+							<li>Code splitting (Lazy loading)</li>
+							<li>Data urls</li>
+							<li>PWA</li>
+							<li>Tree shaking (rollup)</li>
+							<li>Bundle size optimization</li>
 						</ul>
 					</section>
 					<section id="bundle-analyzing-result">
