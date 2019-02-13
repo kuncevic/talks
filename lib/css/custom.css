@@ -5,38 +5,38 @@ My custrom css here
 */
 .parent {
   display: flex;
-  padding-top: 	100px !important;
+  padding-top: 100px !important;
 }
 
 .parent {
   display: flex;
-  padding-top: 	100px !important;
+  padding-top: 100px !important;
 }
 
 .padding-top-0px {
-  padding-top: 	0px !important;
+  padding-top: 0px !important;
 }
 
 .padding-top-100px {
-  padding-top: 	100px !important;
+  padding-top: 100px !important;
 }
 
 .left,
 .right {
   display: flex;
   flex-direction: column;
-  padding: 1em 0 0!important;
+  padding: 1em 0 0 !important;
   justify-content: flex-end;
-  width:100%;
+  width: 100%;
 }
 
 .left {
-	text-align: left;
+  text-align: left;
 }
 
 .right {
-    text-align: right;
-	margin-bottom: 0.2em;
+  text-align: right;
+  margin-bottom: 0.2em;
 }
 
 .left p,
@@ -46,73 +46,81 @@ My custrom css here
 }
 
 img.img-no-border {
-	margin: 0 !important;
-	background:none !important;
-	border:none !important;
-	box-shadow: none !important;
+  margin: 0 !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .margin-left-15 {
-	margin-left:15px !important;
+  margin-left: 15px !important;
 }
 
 .inline-block {
-	display:inline-block;
+  display: inline-block;
 }
 
 .line-through,
 a:link.line-through,
 a:visited.line-through,
-a:hover.line-through, 
+a:hover.line-through,
 a:active.line-through {
-	text-decoration:line-through;
+  text-decoration: line-through;
 }
 
 .inline {
-	display:inline !important;
+  display: inline !important;
 }
 
 .middle {
-	vertical-align:middle !important;
+  vertical-align: middle !important;
 }
 
 .margin-0 {
-	margin:0 !important;
+  margin: 0 !important;
 }
 
 .paddng-0 {
-	margin:0;
+  margin: 0;
 }
 
 .line-through {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .list-type-a {
-	list-style-type: lower-alpha !important;
+  list-style-type: lower-alpha !important;
 }
 
 section img.max-width-200 {
-	max-width:200% !important;
+  max-width: 200% !important;
 }
 
 section img.max-width-120 {
-	max-width:120% !important;
+  max-width: 120% !important;
 }
 
 .nowrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 body {
-    background-image: url(../../img/angular-consulting.png);
-    background-size: 10%;
-    background-repeat: no-repeat;
-    background-position: 3% 96%;
+  background-image: url(../../img/angular-consulting.png);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 3% 96%;
 }
-.force-select {  
-  -webkit-user-select: all;  /* Chrome 49+ */
-  -moz-user-select: all;     /* Firefox 43+ */
-  -ms-user-select: all;      /* No support yet */
-  user-select: all;          /* Likely future */   
+.force-select {
+  -webkit-user-select: all; /* Chrome 49+ */
+  -moz-user-select: all; /* Firefox 43+ */
+  -ms-user-select: all; /* No support yet */
+  user-select: all; /* Likely future */
+}
+
+.highlight-text {
+  background:
+  /* top, transparent black, faked with gradient */ linear-gradient(
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
 }
