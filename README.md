@@ -1,7 +1,7 @@
 # The list of my presentations:
 
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
-
+13 Feb 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)  
 11 Jul 2018: [Responsive angular apps with angular flex layout](https://kuncevic.github.io/presentations/responsive-angular-apps-with-angular-flex-layout.html)  
 16 May 2018: [NGXS - State Management for Angular](https://kuncevic.github.io/presentations/ngxs-state-management-for-angular.html)  
 14 Mar 2018: [Progressive Web Apps with Angular](https://kuncevic.github.io/presentations/progressive-web-apps-with-angular.html)  
