@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Full-stack Typescript. Typescirpt all the way from front to back</title>
+
+		<link rel="icon" type="image/x-icon" href="fi/angular.ico">
+
+		<meta name="description" content="angular, single page application, nestjs, typescript, full-stack">
+		<meta name="author" content="Aliaksei Kuncevic">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/angular.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="lib/css/custom.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section id="about">
+						<br />
+						<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></h2>
+						<p>Angular Expert @ angularconsulting.com.au</p>
+						<div style="position:relative;">
+							<div style="position:absolute; left:70px;">
+								<img width="13%" data-src="img/logo-typescript.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+								<img width="13%" data-src="img/logo-angular.png" class="img-no-border" style="margin-left:15px !important;display:inline-block;"/>
+							</div>
+						</div>
+						<br /><br />
+						<div class="parent">
+							<div class="left">
+								<p>
+									<a href="http://linkedin.com/in/kuncevic" target="_blank">linkedin.com/in/kuncevic</a>
+									<br />
+									<a href="https://angularconsulting.com.au" target="_blank">angularconsulting.com.au</a>
+								</p>
+							</div>
+							<div class="right">
+								<small>
+									<p>v 1.0 (13/02/2019)</p>
+								</small>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section id="intro">
+					<h2>Typescirpt <br />  all the way from front to back</h2>
+					<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></small></p>
+
+					<div class="parent padding-top-0px">
+						<div class="left">
+							<p>
+								<a href="http://linkedin.com/in/kuncevic" target="_blank">linkedin.com/in/kuncevic</a>
+								<br />
+								<a href="https://angularconsulting.com.au" target="_blank">angularconsulting.com.au</a>
+							</p>
+						</div>
+						<div class="right">
+							<small>
+								<p>v 1.0 (13/02/2019)</p>
+							</small>
+						</div>
+					</div>
+				</section>
+				<section>
+					<section id="typescript">
+						<h2>Typescript</h2>
+						<img width="10%" data-src="img/logo-typescript.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="who-is-using-typescript">
+						<h2>Who is already using Typescript?</h2>
+					</section>
+					<section id="who-is-not-using-typescript">
+						<h2>Who is not using Typescript?</h2>
+					</section>
+					<section id="who-want-to-use-typescript">
+						<h2>Who want to use Typescript?</h2>
+					</section>					
+				</section>
+				<section>
+					<section id="front-end">
+						<h2>How long ago Typescript started to get adopted by front-end world?</h2>
+					</section>
+					<section id="typescirpt-adoption-start">
+						<h2>2016</h2>
+					</section>
+					<section id="a-bit-of-history">
+						<img width="100%" data-src="img/full-stack-typescirpt/npm-typescript-vs-frameworks.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="the-year-of-typescirpt adoption">
+						<h2>Will typescript will go even more popular over the years?</h2>
+					</section>
+					<section id="typescirpt-yes" data-background="img/yes.gif" class="present" data-background-image="img/wooow.gif" style="top: 280px; display: block;">
+					</section>
+					<section id="top-front-end-frameworks">
+						<h2>React vs Angular vs Vue vs Ember</h2>
+					</section>
+				</section>
+				<section>
+					<section id="how">
+						<h2>How would aproach typescript code on back-end?</h2>
+					</section>
+					<section id="anyone-tried">
+						<h2>Anyone tried that?</h2>
+					</section>
+					<section id="anyone-tried">
+						<h2>I did, early 2016</h2>
+					</section>
+					<section id="dependency-injection">
+						<h2>Dependency injection</h2>
+							<a href="http://inversify.io/" target="_blank">
+								inversify.io
+							</a>
+					</section>
+					<section id="back-early-2016-1">
+						<img width="100%" data-src="img/full-stack-typescirpt/inversify-1.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="back-early-2016-2">
+						<img width="100%" data-src="img/full-stack-typescirpt/inversify-2.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="typescript-configuration">
+						<h2>Config/Typings</h2>
+						<img width="70%" data-src="img/full-stack-typescirpt/configuration.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="me-back-in-2016">
+						<img width="40%" data-src="img/full-stack-typescirpt/me-back-in-2016.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="current-days" data-background="img/wooow.gif" class="present" data-background-image="img/wooow.gif" style="top: 280px; display: block;">
+						<h2>2018</h2>
+					</section>
+					<section id="nestjs">
+						<h2>Nestjs</h2>
+						<img width="40%" data-src="img/logo-nest.png" class="img-no-border margin-left-15"/>
+					</section>
+				</section>
+				<section>
+					<section id="nest-and-angular">
+						<h3>A progressive <span class="force-select"> Node.js framework </span> for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8) heavily <span class="force-select">inspired by Angular</span></h3>
+					</section>
+					<section id="nest-features">
+						<h2>Features</h2>
+						<ul>
+							<li>Dependency Injection</li>
+							<li>Providers</li>
+							<li>Modules</li>
+							<li>Middlewares</li>
+							<li>Pipes</li>
+							<li>Guards</li>
+							<li>Interseptors</li>
+							<li>Custom decorators</li>
+							<li>Object Oriented Programming</li>
+							<li>Functional Programming</li>
+							<li>Functional Reactive Programming</li>
+						</ul>
+					</section>
+					<section id="nestjs-benefits">
+						<h2>Benefits</h2>
+						<ul>
+							<li>Build nice maintainable architectures</li>
+							<li>Share typescirpt code between Angular and Nestjs</li>
+							<li>Express under the hood</li>
+							<li>Compatibility with many other nodejs libraries</li>
+						</ul>
+					</section>
+					<section id="nest-start">
+					<h2>Init new project</h2>
+<pre><code class="hljs">npm i -g @nestjs/cli
+nest new project-name</code></pre>
+<p>*using @angular/devkit under the hood</p>
+					</section>
+					<section id="code-base">
+					<h2>NPM Run</h2><pre><code class="hljs"> build
+    tsc -p tsconfig.build.json
+  format
+    prettier --write "src/**/*.ts"
+  start:dev
+    nodemon
+  start:debug
+    nodemon --config nodemon-debug.json
+  prestart:prod
+    rimraf dist && tsc
+  start:prod
+    node dist/main.js
+  lint
+    tslint -p tsconfig.json -c tslint.json
+  test:watch
+    jest --watch
+  test:cov
+    jest --coverage
+  test:debug
+    node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand
+  test:e2e
+    jest --config ./test/jest-e2e.json</code></pre>
+					</section>
+					<section id="code-sharing">
+						<h2>Code sharing</h2>
+						<pre><code data-trim data-noescape class="hljs"> "compilerOptions": {
+    "paths": {
+       <mark>"@serverTypes/*": ["../server/src/types/*"],
+       "@serverHelpers/*": ["../server/src/core/helpers/*"]</mark>
+    }
+  },</code></pre>
+					</section>
+					<section id="nestjs-advanced">
+					<h2>Using NestJS with Nx</h2>
+					<pre><code class="hljs">ng g node-app nestjs-app --framework nestjs
+ng serve nestjs-app
+ng build nestjs-app
+ng test nestjs-app
+ng lint nestjs-app</code></pre>
+						<a href="https://blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6" target="_blank">
+							blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6
+						</a>
+					</section>
+					<section id="nestjs-examples">
+						<a href="https://github.com/nestjs/nest" target="_blank">
+							github.com/nestjs/nest
+						</a>
+					</section>
+				</section>
+				<section>
+					<section id="demo">
+						<h2>demo</h2>
+					</section>
+					<section id="framework-watch">
+						<h2><a href="https://framework.watch/" target="_blank">
+							framework.watch
+						</a></h2>
+					</section>
+				</section>
+				<section>
+					<section id="links" class="nowrap">
+					<div style="margin-left:-50px;">
+						<h3>Links</h3>
+							<a href="https://typescriptlang.org/" target="_blank">
+								typescriptlang.org
+							</a>
+							<br />
+							<a href="https://nestjs.com/" target="_blank">
+								tsmean.com
+							</a>
+							<br />
+							<a href="http://inversify.io/" target="_blank">
+								inversify.io
+							</a>
+							<br />
+							<a href="https://github.com/nestjs/nest" target="_blank">
+								github.com/nestjs/nest
+							</a>
+							<br />
+							<a href="hhttps://blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6" target="_blank">
+								blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6
+							</a>
+							<br />
+							<a href="https://framework.watch" target="_blank">
+								framework.watch
+							</a>
+							<br />
+							<a href="https://github.com/kuncevic/presentations" target="_blank">
+								github.com/kuncevic/presentations
+							</a>
+							<br />
+						<div>
+					</section>
+					<section id="any-questions">
+						<div style="display:inline-block;">
+							<img width="26%" data-src="img/logo-angular.png" class="img-no-border" style="display:inline-block;vertical-align:middle;"/><h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
+						</div>
+						<h2>questions ?</h2>
+						<br />
+						<div style="display:inline-block;">
+							<img width="10%" data-src="img/logo-twitter.png" class="img-no-border" style="display:inline-block;vertical-align:middle;" /><a href="http://twitter.com/kuncevic" target="_blank" style="padding:.2em 0 0 .2em;">@kuncevic</a>
+						</div>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
