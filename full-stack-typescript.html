@@ -67,6 +67,7 @@
 							<div class="right">
 								<small>
 									<p>v 1.0 (13/02/2019)</p>
+									<p>v 1.1 (07/03/2019)</p>
 								</small>
 							</div>
 						</div>
@@ -87,15 +88,12 @@
 						<div class="right">
 							<small>
 								<p>v 1.0 (13/02/2019)</p>
+								<p>v 1.1 (07/03/2019)</p>
 							</small>
 						</div>
 					</div>
 				</section>
 				<section>
-					<section id="typescript">
-						<h2>Typescript</h2>
-						<img width="10%" data-src="img/logo-typescript.png" class="img-no-border margin-left-15"/>
-					</section>
 					<section id="who-is-using-typescript">
 						<h2>Who is already using Typescript?</h2>
 					</section>
@@ -108,26 +106,23 @@
 				</section>
 				<section>
 					<section id="front-end">
-						<h3>What year </br> Typescript started </br> to get heavily adopted </br> by the front-end world?</h3>
+						<h3>What year </br> Typescript started </br> to get heavily adopted ?</h3>
 					</section>
 					<section id="typescript-adoption-start">
 						<h2>2016</h2>
 					</section>
-					<section id="a-bit-of-history">
-						<img width="100%" data-src="img/full-stack-typescript/npm-typescript-vs-frameworks.png" class="img-no-border margin-left-15"/>
+					<section id="a-bit-of-history" class="w120" style="margin-left:-95px;">
+						<img width="200%" data-src="img/full-stack-typescript/npm-typescript-vs-frameworks.png" class="img-no-border margin-left-15"/>
 					</section>
-					<section id="top-front-end-frameworks">
-						<h2>React vs Angular vs Vue vs Ember</h2>
-					</section>
-					<section id="the-year-of-typescript adoption">
-						<h2>Will typescript go even more popular over the years?</h2>
+					<section id="typescript-top-front-end-frameworks">
+						<h2>Can you do typescript with React, Angular, Vue, Ember?</h2>
 					</section>
 					<section id="typescript-yes" data-background="img/yes.gif" class="present" data-background-image="img/wooow.gif" style="top: 280px; display: block;">
 					</section>
 				</section>
 				<section>
 					<section id="how">
-						<h3>How would you approach typescript </br> for back-end development?</h3>
+						<h3>Approaching typescript </br> for back-end development with nodejs</h3>
 					</section>
 					<section id="anyone-tried">
 						<h2>Anyone tried that?</h2>
@@ -135,22 +130,22 @@
 					<section id="anyone-tried">
 						<h2>I did, early 2016</h2>
 					</section>
-					<section id="dependency-injection">
-						<h2>Dependency injection</h2>
-							<a href="http://inversify.io/" target="_blank">
-								inversify.io
-							</a>
-					</section>
-					<section id="back-early-2016-1">
-						<img width="100%" data-src="img/full-stack-typescript/inversify-1.png" class="img-no-border margin-left-15"/>
-					</section>
-					<section id="back-early-2016-2">
-						<img width="100%" data-src="img/full-stack-typescript/inversify-2.png" class="img-no-border margin-left-15"/>
-					</section>
 					<section id="typescript-configuration">
-						<h2>Config/Typings</h2>
+						<h2>Config and types</h2>
 						<img width="70%" data-src="img/full-stack-typescript/configuration.png" class="img-no-border margin-left-15"/>
 					</section>
+					<section id="dependency-injection">
+							<h2>Dependency injection</h2>
+								<a href="http://inversify.io/" target="_blank">
+									inversify.io
+								</a>
+						</section>
+						<section id="back-early-2016-1">
+							<img width="100%" data-src="img/full-stack-typescript/inversify-1.png" class="img-no-border margin-left-15"/>
+						</section>
+						<section id="back-early-2016-2">
+							<img width="100%" data-src="img/full-stack-typescript/inversify-2.png" class="img-no-border margin-left-15"/>
+						</section>
 					<section id="me-back-in-2016">
 						<img width="40%" data-src="img/full-stack-typescript/me-back-in-2016.png" class="img-no-border margin-left-15"/>
 					</section>
@@ -165,18 +160,28 @@
 					<section id="nest-and-angular">
 						<h3>A progressive <span class="highlight-text"> Node.js framework</span> for building efficient and scalable server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8) heavily<span class="highlight-text"> inspired by Angular</span></h3>
 					</section>
+					<section id="angular_js_vs_angualr">
+							<div>
+								<img width="50%" data-src="img/angular.png" class="img-no-border margin-left-15 middle"/> <h2 class="inline middle">== 2+</h2>
+							</div>
+							<!-- <h1 class="margin-0 padding-0">&ne;</h1> -->
+							<h1>!=	</h1>
+							<div>
+								<img width="50%" data-src="img/angular_js.png" class="img-no-border margin-left-15 middle"/> <h2 class="inline middle">== 1.x</h2>
+							</div>
+						</section>
 					<section id="nest-features">
 						<h2>Features</h2>
 						<ul>
 							<li>Controllers</li>
-							<li>Dependency Injection</li>
 							<li>Providers</li>
 							<li>Modules</li>
 							<li>Middlewares</li>
+							<li>Interceptors</li>
 							<li>Pipes</li>
 							<li>Guards</li>
-							<li>Interseptors</li>
 							<li>Custom decorators</li>
+							<li>Dependency Injection</li>
 							<li>Testable</li>
 							<li>OOP/FP/FRP</li>
 						</ul>
@@ -194,7 +199,6 @@
 					<h2>Init new project</h2>
 <pre><code class="hljs">npm i -g @nestjs/cli
 nest new project-name</code></pre>
-<p>*using @angular/devkit under the hood</p>
 					</section>
 					<section id="code-base">
 					<h2>NPM Run</h2><pre><code class="hljs"> build
@@ -240,20 +244,55 @@ ng lint nestjs-app</code></pre>
 							blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6
 						</a>
 					</section>
-					<section id="nestjs-examples">
-						<a href="https://github.com/nestjs/nest" target="_blank">
-							github.com/nestjs/nest
+					<section id="temean">
+						<h2>tsmean</h2>
+						<a href="https://www.tsmean.com" target="_blank">
+							tsmean.com
+						</a>
+					</section>
+					<section id="tsmean-stack">
+						<img width="70%" data-src="img/full-stack-typescript/tsmean-tech-stack.png" class="img-no-border margin-left-15"/>
+					</section>
+				</section>
+				<section>
+					<section id="recap">
+						<h3>Fullstack typescript</h3>
+							<ol type="I">
+								<li>monorepo</li>
+								<li>tsmean</li>
+								<li>NX</li>
+							<ol/>
+					</section>
+					<section id="can-i-use-nestjs-with-no-angular-frontend">
+						<h3>Can I use nestjs with react, vue, etc?</h3>
+					</section>
+					<section id="nest-and-angular-is-the-best-combo">
+							<h3>The perfect combo</h3>
+							<img width="70%" data-src="img/full-stack-typescript/logo-nest-and-angular.png" class="img-no-border margin-left-15"/>
+					</section>
+					<section id="start-with-nestjs">
+							<h3>Start with nestjs</h3>
+							<a href="https://github.com/nestjs/nest" target="_blank">
+								github.com/nestjs/nest
+							<a href="https://github.com/juliandavidmr/awesome-nestjs" target="_blank">
+								github.com/juliandavidmr/awesome-nestjs
 						</a>
 					</section>
 				</section>
 				<section>
-					<section id="demo">
-						<h2>demo</h2>
+					<section id="framework-watch-build-with-typescript">
+							<h2>Top Front-end Frameworks Trends</h2>
 					</section>
 					<section id="framework-watch">
-						<h2><a href="https://framework.watch/" target="_blank">
-							framework.watch
-						</a></h2>
+							<h2><a href="https://framework.watch/" target="_blank">
+								framework.watch
+							</a></h2>
+					</section>
+					<section id="what-framework-watch-does">
+							<h2>Build fully with typescript (angular + nestjs)</h2>
+					</section>
+					<section id="demo">
+						<h2>demo</h2>
 					</section>
 				</section>
 				<section>
@@ -264,7 +303,7 @@ ng lint nestjs-app</code></pre>
 								typescriptlang.org
 							</a>
 							<br />
-							<a href="https://nestjs.com/" target="_blank">
+							<a href="https://tsmean.com" target="_blank">
 								tsmean.com
 							</a>
 							<br />
@@ -274,6 +313,10 @@ ng lint nestjs-app</code></pre>
 							<br />
 							<a href="https://github.com/nestjs/nest" target="_blank">
 								github.com/nestjs/nest
+							</a>
+							<br />
+							<a href="https://github.com/juliandavidmr/awesome-nestjs" target="_blank">
+								github.com/juliandavidmr/awesome-nestjs
 							</a>
 							<br />
 							<a href="hhttps://blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6" target="_blank">
