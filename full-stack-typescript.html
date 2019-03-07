@@ -295,44 +295,6 @@ ng lint nestjs-app</code></pre>
 						<h2>demo</h2>
 					</section>
 				</section>
-				<section>
-					<section id="links" class="nowrap">
-					<div style="margin-left:-50px;">
-						<h3>Links</h3>
-							<a href="https://typescriptlang.org/" target="_blank">
-								typescriptlang.org
-							</a>
-							<br />
-							<a href="https://tsmean.com" target="_blank">
-								tsmean.com
-							</a>
-							<br />
-							<a href="http://inversify.io/" target="_blank">
-								inversify.io
-							</a>
-							<br />
-							<a href="https://github.com/nestjs/nest" target="_blank">
-								github.com/nestjs/nest
-							</a>
-							<br />
-							<a href="https://github.com/juliandavidmr/awesome-nestjs" target="_blank">
-								github.com/juliandavidmr/awesome-nestjs
-							</a>
-							<br />
-							<a href="hhttps://blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6" target="_blank">
-								blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6
-							</a>
-							<br />
-							<a href="https://framework.watch" target="_blank">
-								framework.watch
-							</a>
-							<br />
-							<a href="https://github.com/kuncevic/presentations" target="_blank">
-								github.com/kuncevic/presentations
-							</a>
-							<br />
-						<div>
-					</section>
 					<section id="any-questions">
 						<div style="display:inline-block;">
 							<img width="26%" data-src="img/logo-angular.png" class="img-no-border" style="display:inline-block;vertical-align:middle;"/><h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
@@ -343,6 +305,44 @@ ng lint nestjs-app</code></pre>
 							<img width="10%" data-src="img/logo-twitter.png" class="img-no-border" style="display:inline-block;vertical-align:middle;" /><a href="http://twitter.com/kuncevic" target="_blank" style="padding:.2em 0 0 .2em;">@kuncevic</a>
 						</div>
 					</section>
+					<section>
+							<section id="links" class="nowrap">
+							<div style="margin-left:-50px;">
+								<h3>Links</h3>
+									<a href="https://typescriptlang.org/" target="_blank">
+										typescriptlang.org
+									</a>
+									<br />
+									<a href="https://tsmean.com" target="_blank">
+										tsmean.com
+									</a>
+									<br />
+									<a href="http://inversify.io/" target="_blank">
+										inversify.io
+									</a>
+									<br />
+									<a href="https://github.com/nestjs/nest" target="_blank">
+										github.com/nestjs/nest
+									</a>
+									<br />
+									<a href="https://github.com/juliandavidmr/awesome-nestjs" target="_blank">
+										github.com/juliandavidmr/awesome-nestjs
+									</a>
+									<br />
+									<a href="hhttps://blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6" target="_blank">
+										blog.nrwl.io/robust-backends-with-nx-7-3-and-nestjs-8fe1611375e6
+									</a>
+									<br />
+									<a href="https://framework.watch" target="_blank">
+										framework.watch
+									</a>
+									<br />
+									<a href="https://github.com/kuncevic/presentations" target="_blank">
+										github.com/kuncevic/presentations
+									</a>
+									<br />
+								<div>
+							</section>
 				</section>
 			</div>
 
@@ -372,6 +372,14 @@ ng lint nestjs-app</code></pre>
 					{ src: 'plugin/notes/notes.js', async: true }
 				]
 			});
+
+			Reveal.configure({
+			keyboard: {
+				65: function() {Reveal.slide(0)}, // go to the next slide when the ENTER key is pressed
+				81: function() {Reveal.slide(8)}, // do something custom when ESC is pressed
+				32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+			}
+		});
 
 		</script>
 
