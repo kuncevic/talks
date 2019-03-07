@@ -26,6 +26,7 @@
 
 ## [Node Sydney](https://www.meetup.com/node-sydney):
 
+07 Mar 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)   
 09 Sep 2018: [How to improve the performance of a Single Page Application](https://kuncevic.github.io/presentations/how-to-improve-the-performance-of-a-single-page-application.html)  
 02 Nov 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)  
 
