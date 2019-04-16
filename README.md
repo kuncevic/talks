@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [Sydney Typescript](https://www.meetup.com/Sydney-TypeScript):
+
+16 April 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)
+
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
 13 Feb 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)  
 11 Jul 2018: [Responsive angular apps with angular flex layout](https://kuncevic.github.io/presentations/responsive-angular-apps-with-angular-flex-layout.html)  
