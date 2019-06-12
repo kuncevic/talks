@@ -118,20 +118,19 @@
               </small>
             </div>
           </div>
-        </section>
-        <section>
-          <section id="what-is-new-in-angular-8">
+				</section>
+				<section id="what-is-new-in-angular-8">
             <h2>Angular 8 features</h2>
             <ul>
               <li>Differential loading</li>
-              <li>Better route config</li>
+              <li>New Lazy Loading config</li>
               <li>CLI Builders API</li>
               <li>Migration Improvements</li>
-              <li>New Deprecation Guide</li>
-              <li>Opt-in Ivy and Bazel</li>
+							<li>Opt-in Ivy and Bazel</li>
+							<li>New Deprecation Guide</li>
             </ul>
           </section>
-
+        <section>
           <section id="differential-loading">
             <h2>Differential loading</h2>
             <pre><code data-trim data-noescape class="hljs">{
@@ -145,9 +144,13 @@
 &lt;script nomodule src=&quot;&hellip;&quot;&gt;&lt;/script&gt; // Legacy JS,</code></pre>
           </section>
           <section id="new-routing">
-            <h2>Better route config</h2>
-            <pre><code data-trim data-noescape class="hljs">
+						<h2>Lazy Loading config</h2>
+						<h3>Old</h3>
+						<pre><code data-trim data-noescape class="hljs">
 path: '/admin', loadChildren: './admin/admin.module#AdminModule'
+</code></pre>
+<h3>new</h3>
+<pre><code data-trim data-noescape class="hljs">
 path: `/admin`, loadChildren: () =>
     import(`./admin/admin.module`).then(m => m.AdminModule)
 </code></pre>
@@ -156,7 +159,7 @@ path: `/admin`, loadChildren: () =>
             <h2>CLI Builder API</h2>
             <p>Builders are functions that implement the logic and behaviour for a task.</p>
             <code data-trim data-noescape class="hljs"
-              >ng add @angular/fire ng run my-app:deploy
+              >ng add @angular/fire <br/> ng run my-app:deploy
             </code>
             <br />
             <a href="https://github.com/mgechev/cli-builders-demo" target="_blank"
@@ -169,36 +172,58 @@ path: `/admin`, loadChildren: () =>
           </section>
           <section id="migration-improvements">
             <h2>Migration Improvements</h2>
-            <p>$location => LocationUpgradeModule</p>
+						<p>$location => LocationUpgradeModule</p>
+						<a href="https://angular.io/guide/upgrade#using-the-unified-angular-location-service" target="_blank"
+              >https://angular.io/guide/upgrade#using-the-unified-angular-location-service</a
+            >
           </section>
-          <section id="new-deprecation-guide">
-            <h2>New Deprecation Guide</h2>
-            <p>
-              <a href="https://angular.io/guide/deprecations" target="_blank"
-                >https://angular.io/guide/deprecations</a
-              >
-            </p>
-          </section>
-          <section id="ivy-bazel">
+          <section id="experimental-ivy">
             <h2>Experimental Ivy</h2>
             <pre><code data-trim data-noescape class="hljs">"angularCompilerOptions": {
   "enableIvy": true
 }</code></pre>
-            <h2>and Bazel</h2>
-            <code
-              ><code data-trim data-noescape class="hljs"
-                >npm -g i @angular/bazel <br />
-                new bzl-app --collection=@angular/bazel <br />
-                ng add @angular/bazel <br />
-                ng serve / ng build --prod
-              </code></code
-            >
-          </section>
+					</section>
+					<section id="ivy-status">
+							<h2>Ivy Status</h2>
+							<img
+              width="80%"
+              data-src="img/what-is-new-in-angular-8/ivy-status.png"
+              class="img-no-border max-width-200"
+						/>
+						<br />
+							<a href="https://is-angular-ivy-ready.firebaseapp.com/" target="_blank">
+								https://is-angular-ivy-ready.firebaseapp.com
+							</a>
+						</section>
+					<section id="experimental-bazel">
+							<h2>Experimental Bazel</h2>
+							<code
+								><code data-trim data-noescape class="hljs"
+									>npm -g i @angular/bazel <br />
+									new bzl-app --collection=@angular/bazel <br />
+									ng add @angular/bazel <br />
+									ng serve / ng build --prod
+								</code></code
+							>
+						</section>
         </section>
         <section>
+						<section id="new-deprecation-guide">
+								<h2>Update to Angular 8</h2>
+            </section>
+					  <section id="new-deprecation-guide">
+								<h2>Deprecation Guide</h2>
+								<p>
+									<a href="https://angular.io/guide/deprecations" target="_blank"
+										>https://angular.io/guide/deprecations</a
+									>
+								</p>
+								<h2>Update to Angular 8</h2>
+            		<p><a href="https://update.angular.io" target="_blank">https://update.angular.io</a></p>
+
+							</section>
           <section id="migrate-to-angular-8">
-            <h2>Update to Angular 8</h2>
-            <p><a href="https://update.angular.io" target="_blank">https://update.angular.io</a></p>
+						<h2>Update command</h2>
             <code
               ><code data-trim data-noescape class="hljs"
                 >ng update @angular/cli @angular/core <br />
@@ -241,8 +266,8 @@ path: `/admin`, loadChildren: () =>
 				<code data-trim data-noescape class="hljs">ng build / ng build --prod
 				</code>
 		</section>
-		<section id="other-issues">
-				<h2>Other Issues</h2>
+		<section id="runtime-issues">
+				<h2>Runtime Issues</h2>
 				<img
                  width="100%"
                  data-src="img/what-is-new-in-angular-8/other-issues-1.png"
@@ -280,8 +305,8 @@ path: `/admin`, loadChildren: () =>
           </section>
         </section>
         <section id="demo">
-          <h2>demo</h2>
-        </section>
+						<h2>demo</h2>
+					</section>
         <section>
           <section id="links" class="nowrap">
             <h3>Links</h3>
