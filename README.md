@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
+
+17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)  
+
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
 12 Jun 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)  
 13 Feb 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)  
