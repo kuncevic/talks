@@ -132,3 +132,5 @@ section .w120 {
 .center {
   text-align: center;
 }
+
+.no-transform { text-transform: none !important; }
