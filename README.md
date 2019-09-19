@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [Front-end Developers Sydney](https://www.meetup.com/front-end-developers-sydney):
+
+19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)  
+
 ## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
 
 17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)  
