@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Modern Front-end Frameworks and the Complexity of Web Development</title>
+
+	<link rel="icon" type="image/x-icon" href="fi/angular.ico">
+
+	<meta name="description" content="angular, single page application, nestjs, typescript, full-stack">
+	<meta name="author" content="Aliaksei Kuncevic">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/angular.css" id="theme">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<link rel="stylesheet" href="lib/css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<section id="about">
+					<br />
+					<h2><a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></h2>
+					<p>Angular Expert @ angularconsulting.com.au</p>
+					<div style="position:relative;">
+						<div style="position:absolute; left:70px;">
+							<img width="13%" data-src="img/logo-typescript.png" class="img-no-border"
+								style="margin-left:15px !important;display:inline-block;" />
+							<img width="13%" data-src="img/logo-angular.png" class="img-no-border"
+								style="margin-left:15px !important;display:inline-block;" />
+						</div>
+					</div>
+					<br /><br />
+					<div class="parent">
+						<div class="left">
+							<p>
+								<a href="http://linkedin.com/in/kuncevic" target="_blank">linkedin.com/in/kuncevic</a>
+								<br />
+								<a href="https://angularconsulting.com.au" target="_blank">angularconsulting.com.au</a>
+							</p>
+						</div>
+						<div class="right">
+							<small>
+								<p>v 1.0 (19/09/2019)</p>
+							</small>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section id="intro">
+				<h3>Modern Front-end Frameworks & the Complexity of Web Development</h3>
+				<p><small>by <a href="https://linkedin.com/in/kuncevic">Aliaksei Kuncevič</a></small></p>
+
+				<div class="parent padding-top-0px">
+					<div class="left">
+						<p>
+							<a href="http://linkedin.com/in/kuncevic" target="_blank">linkedin.com/in/kuncevic</a>
+							<br />
+							<a href="https://angularconsulting.com.au" target="_blank">angularconsulting.com.au</a>
+						</p>
+					</div>
+					<div class="right">
+						<small>
+							<p>v 1.0 (19/09/2019)</p>
+						</small>
+					</div>
+				</div>
+			</section>
+			<section>
+				<section id="timeline-1">
+					<h4>History</h4>
+					<h4>↓</h4>
+					<h4>Frameworks</h4>
+					<h4>↓</h4>
+					<h4>Complexity</h4>
+					<h4>↓</h4>
+					<h4>Future</h4>
+				</section>
+			</section>
+			<section>
+				<section id="question-1">
+					<h2>Who is a web-developer?</h2>
+				</section>
+				<section id="question-2">
+					<h2>Who is using angular/react/vue?</h2>
+				</section>
+			</section>
+			<section>
+				<section id="front-end-history-1">
+					<h2>Short history</h2>
+				</section>
+				<section id="front-end-history-2">
+					<h2>Early 2000</h2>
+				</section>
+				<section id="front-end-history-3" class="w120" style="margin-left:-95px;">
+					<h2>Early 2000</h2>
+					<h3>asp / asp.net / php / jsp <br /> and </br> vanilla javascript</h3>
+				</section>
+				<section id="front-end-history-4">
+					<h3>Monolith application</h3>
+					<img width="70%" data-src="img/frameworks/old-days-webpages.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="front-end-history-4">
+					<h2>late 2000</h2>
+				</section>
+				<section id="front-end-history-6">
+					<h2>jquery</h2> <br />
+					<h3>write less javascript!</h3>
+				</section>
+				<section id="front-end-history-7">
+					<h2>mootools</h2> <br />
+					<h3>write powerful and flexible code!</h3>
+				</section>
+				<section id="front-end-history-8" data-background="img/spongebob_thumb_up.gif" class="present"
+					data-background-image="img/wooow.gif" style="top: 280px; display: block;">
+				</section>
+				<section id="front-end-history-9">
+					<h3>Minimum full-page loads</h3>
+					<img width="70%" data-src="img/frameworks/jquery-days-http.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="front-end-history-10">
+					<h3>server-side routing</h3>
+					<h1>😢</h1>
+				</section>
+				<section id="front-end-history-11">
+					<h2>server-side routing</h2>
+					<img width="90%" data-src="img/frameworks/server-side-routing.gif" />
+				</section>
+			</section>
+			<section>
+				<section id="frameworks-1">
+					<h2>2010</h2>
+				</section>
+				<section id="frameworks-2">
+					<h2>MV* frameworks</h2>
+					<a href="https://twitter.com/jaredpalmer/status/1142800704580591617" target="_blank">
+						https://twitter.com/jaredpalmer/status/1142800704580591617
+					</a>
+				</section>
+				<section id="frameworks-3">
+					<h2>MV* frameworks</h2>
+					<img width="55%" data-src="img/frameworks/mvc-pattern.png" class="img-no-border" />
+				</section>
+				<section id="frameworks-4a">
+					<h2>component-based frameworks</h2>
+				</section>
+				<section id="frameworks-4b">
+					<h3>Modern Frameworks</h3>
+					<img width="80%" data-src="img/frameworks/frameworks.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="frameworks-5">
+					<h3>What problems do they solve?</h3>
+				</section>
+				<section id="frameworks-6">
+					<h2>Benefits</h2>
+					<ul>
+						<li>High-level structured code</li>
+						<li>Complex apps</li>
+						<li>Client-side routing</li>
+						<li>Better user experience</li>
+						<li>Performance</li>
+						<li>SPA/PWA</li>
+					</ul>
+				</section>
+				<section id="frameworks-7">
+					<h3>High level code</h3>
+					<img width="25%" data-src="img/frameworks/template.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="frameworks-8">
+					<h3>High-level code</h3>
+					<pre><code class="hljs">@import { Component, ɵrenderComponent } from '@angular/core';
+@Component({
+  selector: 'app',
+  template: `<h1>{{title}}</h1>`
+})
+  class AppComponent {
+  title="App Title";
+}
+
+ɵrenderComponent(AppComponent);</code></pre>
+				</section>
+				<section id="frameworks-9">
+					<h3>Low-level code (instructions)</h3>
+					<pre><code class="hljs">var AppComponent = /** @class */ (function () {
+AppComponent.ngComponentDef = i0.ɵdefineComponent({
+  type: AppComponent,
+  selectors: [["app-root"]],
+  consts: 2,
+  vars: 1,
+  template: function AppComponent_Template(rf, ctx) {
+    if (rf & 1) {
+	  i0.ɵelementStart(0, "h1");
+	  i0.ɵtext(1);
+	  i0.ɵelementEnd();
+    } if (rf & 2) {
+	  i0.ɵtextBinding(1, i0.ɵinterpolation1("", ctx.title, ""));
+    }
+  }, encapsulation: 2
+});
+}());
+export { AppComponent };</code></pre>
+				</section>
+				<section id="frameworks-10">
+					<h3>Dom</h3>
+					<img width="79%" data-src="img/frameworks/dom.png" />
+				</section>
+				<section id="frameworks-11">
+					<h2>Complex Apps</h2>
+					<img width="70%" data-src="img/angular-feature-enterprise.png" />
+				</section>
+				<section id="frameworks-12a">
+					<h3>client-side routing</h3>
+					<!-- <video controls autoplay>
+						<source data-src="img/frameworks/client-side-routing.mp4" type="video/mp4" />
+					</video> -->
+					<img width="110%" data-src="img/frameworks/client-side-routing.gif" />
+				</section>
+				<section id="frameworks-12b">
+					<h3>server-side routing <br /> vs <br /> client-side routing</h3>
+				</section>
+				<section id="frameworks-13" data-background="img/it-depends.gif" class="present"
+					data-background-image="img/wooow.gif" style="top: 280px; display: block;">
+				</section>
+				<section id="frameworks-14">
+					<h3>Performance and User Experience</h3>
+					<img width="70%" data-src="img/web-performance/slow-page-load.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="frameworks-16">
+					<h2>3 seconds rule</h2>
+					<img width="80%" data-src="img/web-performance/page-load-research.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="frameworks-15">
+					<h3>Single Page Application (SPA)</h3>
+					<img width="70%" data-src="img/frameworks/modern-days-http.png" class="img-no-border margin-left-15" />
+				</section>
+				<section id="frameworks-17">
+					<h2>Endless possibilities</h2>
+				</section>
+				<section id="frameworks-18" data-background="img/happy.gif" class="present"
+					data-background-image="img/happy.gif" style="top: 280px; display: block;">
+				</section>
+			</section>
+			<section>
+				<section id="complexity-1">
+					<h2>The complexity</h2>
+				</section>
+				<section id="complexity-2" data-background-size="contain" data-background-video-loop
+					data-background="img/complexity.mp4" class="present" data-background-video="img/complexity.mp4"
+					style="top: 280px; display: block;">
+				</section>
+				<section id="complexity-3">
+					<h2>Minimal complexity</h2>
+					<img width="30%" data-src="img/web-performance/complexity.png" class="img-no-border margin-left-15 middle" />
+				</section>
+				<section id="complexity-4">
+					<h2>Bundler</h2>
+					<img width="100%" data-src="img/frameworks/app-input-files.png" class="img-no-border margin-left-15 middle" />
+				</section>
+				<section id="complexity-5">
+					<h2>Minify/uglify</h2>
+					<img width="100%" data-src="img/web-performance/minification.png"
+						class="img-no-border margin-left-15 middle" />
+				</section>
+				<section id="complexity-6">
+					<h2>Demo</h2>
+				</section>
+			</section>
+			<section>
+				<section id="frontend-watch-1">
+					<h3>How would you choose the front-end framework?</h3>
+				</section>
+				<section id="frontend-watch-2">
+					<h3>Are you solo developer?</h3>
+					<h4>Are you comfortable with typescript?</h4>
+					<h4>Are you more comfortable with javascript?</h4>
+				</section>
+				<section id="frontend-watch-3">
+					<h3>Are you CTO?</h3>
+					<h3>How big is your team?</h3>
+					<h4>Is your team is comfortable with typescript?</h4>
+					<h4>Is your team is more comfortable with javascript?</h4>
+				</section>
+				<section id="frontend-watch-4">
+					<h3>What are you trying to achieve?</h3>
+					<h4>Is it a big project?</h4>
+					<h4>Is it a small project?</h4>
+					<h4>Are you approaching multiple projects?</h4>
+					<h4>...or you just learning a new tech</h4>
+				</section>
+				<section id="frontend-watch-5">
+					<h3>What next?</h3>
+				</section>
+				<section id="frontend-watch-6">
+					<h2><a href="https://frontendwatch.com/" target="_blank">
+							frontendwatch.com
+						</a></h2>
+				</section>
+				<section id="frontend-watch-7">
+					<img width="100%" data-src="img/full-stack-typescript/frontend_frameworks_trends.png" />
+				</section>
+				<section id="demo">
+					<h2>demo</h2>
+				</section>
+			</section>
+			<section>
+				<section id="next-1">
+					<h2>Future is now</h2>
+				</section>
+				<section id="next-2">
+					<h2>Web Components</h2>
+					<img width="100%" data-src="img/frameworks/new-era.png" class="img-no-border margin-left-15 middle" />
+				</section>
+				<section id="next-3">
+					<p>Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated
+						HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component
+						standards, will work across modern browsers, and can be used with any JavaScript library or framework that
+						works with HTML.</p>
+					<p>Web components are based on existing web standards. Features to support web components are currently being
+						added to the HTML and DOM specs.</p>
+					<a href="https://en.wikipedia.org/wiki/Web_Components" target="_blank">(c) Wikipedia</a>
+				</section>
+				<section id="next-4">
+					<h2>Can I use it now?</h2>
+					<a href="https://caniuse.com/#search=web%20components" target="_blank">
+						https://caniuse.com/#search=web%20components
+					</a>
+				</section>
+				<section id="next-5">
+					<h2>Can I use it now?</h2>
+					<img width="120%" data-src="img/frameworks/can-i-use.png" class="img-no-border margin-left-15 middle" />
+				</section>
+				<section id="next-6">
+					<h2>What is next?</h2>
+				</section>
+			</section>
+			<section id="any-questions">
+				<div style="display:inline-block;">
+					<img width="26%" data-src="img/logo-angular.png" class="img-no-border"
+						style="display:inline-block;vertical-align:middle;" />
+					<h2 style="padding:.2em 0 0 .1em;vertical-align:middle;display:inline-block;">NY</h2>
+				</div>
+				<h2>questions ?</h2>
+				<br />
+				<div style="display:inline-block;">
+					<img width="10%" data-src="img/logo-twitter.png" class="img-no-border"
+						style="display:inline-block;vertical-align:middle;" /><a href="http://twitter.com/kuncevic" target="_blank"
+						style="padding:.2em 0 0 .2em;">@kuncevic</a>
+				</div>
+			</section>
+
+			<section>
+				<section id="links" class="nowrap">
+					<div style="margin-left:-50px;">
+						<h3>Links</h3>
+						<a href="https://github.com/gothinkster/realworld" target="_blank">
+							https://github.com/gothinkster/realworld
+						</a>
+						<br />
+						<a href="https://caniuse.com/#search=web%20components" target="_blank">
+							https://caniuse.com/#search=web%20components
+						</a>
+						<br />
+						<a href="https://en.wikipedia.org/wiki/Web_Components" target="_blank">
+							https://en.wikipedia.org/wiki/Web_Components
+						</a>
+						<br />
+						<a href="https://frontendwatch.com" target="_blank">
+							frontendwatch.com
+						</a>
+						<br />
+						<a href="https://github.com/kuncevic/presentations" target="_blank">
+							github.com/kuncevic/presentations
+						</a>
+						<br />
+						<div>
+				</section>
+			</section>
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+
+		// More info https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+			// More info https://github.com/hakimel/reveal.js#dependencies
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+		Reveal.configure({
+			keyboard: {
+				65: function () { Reveal.slide(0) }, // go to the next slide when the ENTER key is pressed
+				81: function () { Reveal.slide(8) }, // do something custom when ESC is pressed
+				32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+			}
+		});
+
+	</script>
+
+</body>
+
+</html>
