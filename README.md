@@ -1,6 +1,6 @@
 # The list of my presentations:
 
-## [Frontendtech Sydney](https://www.meetup.com/frontendtech):
+## [Frontend Tech Sydney](https://www.meetup.com/frontendtech):
 
 19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
 
