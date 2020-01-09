@@ -1,15 +1,8 @@
 # The list of my presentations:
 
-## [Frontend Tech](https://www.meetup.com/frontendtech):
-
-19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
-
-## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
-
-17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)
-
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
 
+10 Dec 2019: [How to Architect your Angular App like a PRO ](https://speakerdeck.com/kuncevic/how-to-architect-your-angular-app-like-a-pro)  
 12 Jun 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)  
 13 Feb 2019: [Full-stack Typescript](https://kuncevic.github.io/presentations/full-stack-typescript.html)  
 11 Jul 2018: [Responsive angular apps with angular flex layout](https://kuncevic.github.io/presentations/responsive-angular-apps-with-angular-flex-layout.html)  
@@ -21,6 +14,14 @@
 09 Nov 2016: [Getting sarted with angular material 2](https://kuncevic.github.io/presentations/getting-sarted-with-angular-material-2.html)  
 06 Apr 2016: Angular components and forms and databinding // add slides  
 03 Feb 2016: Angular project generators and development workflow // add slides
+
+## [Frontend Tech](https://www.meetup.com/frontendtech):
+
+19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
+
+## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
+
+17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)
 
 ## [Sydney Typescript](https://www.meetup.com/Sydney-TypeScript):
 
