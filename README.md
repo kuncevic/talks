@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [GraphQL Sydney](https://www.meetup.com/GraphQL-Sydney/):
+
+20 Feb 2020: [GraphQL Magic with Angular ](https://speakerdeck.com/kuncevic/graphql-magic-with-angular)  
+
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
 
 10 Dec 2019: [How to Architect your Angular App like a PRO ](https://speakerdeck.com/kuncevic/how-to-architect-your-angular-app-like-a-pro)  
