@@ -1,5 +1,14 @@
 # The list of my presentations:
 
+## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
+
+25 April 2020: [ng-conf insights Angular Minsk 25 April 2020](https://speakerdeck.com/kuncevic/ng-conf-insights-angular-minsk-25-april-2020)  
+17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)
+
+## [Angular Hack Day](http://angularhackday.com):
+7 March 2020: [Angular Basics for Angular Hack Day 7 March 2020](https://speakerdeck.com/kuncevic/angular-basics-for-angular-hack-day-7-march-2020)  
+22 Apr 2016: Angular forms and validation // add slides
+
 ## [GraphQL Sydney](https://www.meetup.com/GraphQL-Sydney/):
 
 20 Feb 2020: [GraphQL Magic with Angular ](https://speakerdeck.com/kuncevic/graphql-magic-with-angular)  
@@ -22,10 +31,6 @@
 ## [Frontend Tech](https://www.meetup.com/frontendtech):
 
 19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
-
-## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
-
-17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)
 
 ## [Sydney Typescript](https://www.meetup.com/Sydney-TypeScript):
 
@@ -52,9 +57,5 @@
 ## [Alt.NET](https://www.meetup.com/Sydney-Alt-Net):
 
 31 Oct 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)
-
-## [Angular Hack Day](http://angularhackday.com):
-
-22 Apr 2016: Angular forms and validation // add slides
 
 Built with [reveal.js](https://github.com/hakimel/reveal.js)
