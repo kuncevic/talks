@@ -1,5 +1,10 @@
 # The list of my presentations:
 
+## [Frontend Tech](https://www.meetup.com/frontendtech):
+
+11 June 2020: [RxJS in 5 minutes](https://speakerdeck.com/kuncevic/rxjs-in-5-minutes)    
+19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
+
 ## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
 
 25 April 2020: [ng-conf insights Angular Minsk 25 April 2020](https://speakerdeck.com/kuncevic/ng-conf-insights-angular-minsk-25-april-2020)  
@@ -27,10 +32,6 @@
 09 Nov 2016: [Getting sarted with angular material 2](https://kuncevic.github.io/presentations/getting-sarted-with-angular-material-2.html)  
 06 Apr 2016: Angular components and forms and databinding // add slides  
 03 Feb 2016: Angular project generators and development workflow // add slides
-
-## [Frontend Tech](https://www.meetup.com/frontendtech):
-
-19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
 
 ## [Sydney Typescript](https://www.meetup.com/Sydney-TypeScript):
 
