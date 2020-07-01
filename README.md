@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [Angular New York](https://www.meetup.com/AngularNYC):
+
+30 June 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)    
+
 ## [Frontend Tech](https://www.meetup.com/frontendtech):
 
 11 June 2020: [RxJS in 5 minutes](https://speakerdeck.com/kuncevic/rxjs-in-5-minutes)    
