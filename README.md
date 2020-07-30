@@ -1,12 +1,16 @@
 # The list of my presentations:
 
+## [Angular NL](https://www.angularnl.com):
+
+25 July 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
+
 ## [Angular New York](https://www.meetup.com/AngularNYC):
 
-30 June 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)    
+30 June 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
 
 ## [Frontend Tech](https://www.meetup.com/frontendtech):
 
-11 June 2020: [RxJS in 5 minutes](https://speakerdeck.com/kuncevic/rxjs-in-5-minutes)    
+11 June 2020: [RxJS in 5 minutes](https://speakerdeck.com/kuncevic/rxjs-in-5-minutes)  
 19 Sept 2019: [Modern Front-end Frameworks & the Complexity of Web Development](https://kuncevic.github.io/presentations/modern-front-end-frameworks-and-the-complexity-of-web-development.html)
 
 ## [Angular Minsk](https://www.meetup.com/Angular-Minsk):
@@ -15,12 +19,13 @@
 17 July 2019: [What's new in Angular 8 and how to migrate](https://kuncevic.github.io/presentations/what-is-new-in-angular-8-and-how-to-migrate.html)
 
 ## [Angular Hack Day](http://angularhackday.com):
+
 7 March 2020: [Angular Basics for Angular Hack Day 7 March 2020](https://speakerdeck.com/kuncevic/angular-basics-for-angular-hack-day-7-march-2020)  
 22 Apr 2016: Angular forms and validation // add slides
 
 ## [GraphQL Sydney](https://www.meetup.com/GraphQL-Sydney/):
 
-20 Feb 2020: [GraphQL Magic with Angular ](https://speakerdeck.com/kuncevic/graphql-magic-with-angular)  
+20 Feb 2020: [GraphQL Magic with Angular ](https://speakerdeck.com/kuncevic/graphql-magic-with-angular)
 
 ## [Ng Sydney](https://www.meetup.com/ng-sydney):
 
