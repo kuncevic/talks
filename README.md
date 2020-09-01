@@ -1,5 +1,13 @@
 # The list of my presentations:
 
+## [Adventures in Angular](https://devchat.tv/podcasts/adv-in-angular):
+
+31 Aug 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
+
+## [Angular Oslo](https://www.meetup.com/AngularJS-Oslo/):
+
+25 Aug 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
+
 ## [Angular Air](https://www.angularair.com):
 
 6 Aug 2020: [Progressive State Management](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
