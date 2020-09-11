@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [DDD Melbourne](https://www.dddmelbourne.com):
+
+10 Sept 2020: [Reactive Services in Angular](https://speakerdeck.com/kuncevic/reactive-services-in-angular)
+
 ## [Adventures in Angular](https://devchat.tv/podcasts/adv-in-angular):
 
 31 Aug 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
