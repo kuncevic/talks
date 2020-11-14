@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [ngLeipzig](https://ngleipzig.de):
+
+11 Nov 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
+
 ## [ngHeidelberg](https://angular-heidelberg.de):
 
 15 Sept 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
