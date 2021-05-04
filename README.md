@@ -1,5 +1,9 @@
 # The list of my presentations:
 
+## [Angular Sydney](https://meetup.com/Angular-sydney)
+
+13 Jan 2021: [Smart and Dumb Components in Angular](https://speakerdeck.com/kuncevic/smart-and-dumb-components-in-angular)  
+
 ## [ngLeipzig](https://ngleipzig.de)
 
 11 Nov 2020: [Progressive State Management with NGXS](https://speakerdeck.com/kuncevic/progressive-state-management-with-ngxs)
@@ -95,5 +99,9 @@
 ## [Alt.NET](https://meetup.com/Sydney-Alt-Net)
 
 31 Oct 2017: [Angular.The Year After](https://kuncevic.github.io/presentations/angular-the-year-after.html)
+
+## [.NET User Group](https://www.meetup.com/NET-User-Group-Minsk)
+
+17 Sept 2015: Modern web development and ASP.NET MVC 6
 
 Built with [reveal.js](https://github.com/hakimel/reveal.js)
