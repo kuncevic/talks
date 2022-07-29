@@ -1,4 +1,4 @@
-# 🚨This repo is no longer updated 🚨 <br/> Please find all my slides @ [kuncevic.dev/talks](https://kuncevic.dev/talks) 👈
+# 🚨This repo is no longer updated 🚨 <br/> Please find all the slides @ [kuncevic.dev/talks](https://kuncevic.dev/talks) 👈
 
 ## The list of my presentations:
 
