@@ -1,6 +1,6 @@
 # 🚨This repo is no longer updated 🚨 <br/> Please find all the slides @ [kuncevic.dev/talks](https://kuncevic.dev/talks) 👈
 
-## The list of my presentations:
+## The list of my presentations
 
 ## [Angular Sydney](https://meetup.com/Angular-sydney)
 
